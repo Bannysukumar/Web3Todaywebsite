@@ -1,0 +1,7 @@
+.wappPage {
+  height: 100vh;
+
+  & > :nth-child(2) {
+    height: calc(100vh - 157px);
+  }
+}

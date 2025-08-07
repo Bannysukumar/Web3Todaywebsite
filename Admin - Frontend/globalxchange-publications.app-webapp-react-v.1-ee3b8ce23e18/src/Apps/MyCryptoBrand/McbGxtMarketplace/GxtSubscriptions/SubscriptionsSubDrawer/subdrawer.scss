@@ -1,0 +1,39 @@
+.subsdata {
+    font-size: 17px;
+    font-weight: 700;
+    color: #212224;
+    margin-bottom: 10px;
+    margin-top: 23px;
+    line-height: 25px
+}
+
+.boxcurrency {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paytext,
+.payprice {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.scrollheight{
+    overflow: scroll;
+    height: calc(100vh - 375px);
+}
+
+.crumbs {
+    font-weight: 400;
+
+    &:hover {
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.crumbSelected {
+    text-decoration: underline;
+    font-weight: 700;
+}

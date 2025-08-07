@@ -1,0 +1,29 @@
+.input-box {
+  width: 100%;
+  p {
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+  div {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--main-color);
+    input {
+      background-color: transparent;
+      border: 0;
+      width: 90%;
+      padding: 8px 0;
+    }
+    img {
+      position: absolute;
+      right: 2%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+  .red-line {
+    border-bottom: 2px solid var(--red-color);
+  }
+}

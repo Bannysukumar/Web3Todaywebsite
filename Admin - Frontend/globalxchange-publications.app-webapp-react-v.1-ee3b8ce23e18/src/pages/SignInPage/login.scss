@@ -1,0 +1,128 @@
+
+@import "../../static/scss/mixin.scss";
+
+.grid4{
+    // position: relative;
+    // height: 380px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-gap: 2rem; */
+    /* padding: 0px 30px; */
+    /* background-color: #e8e8e2; */
+    /* background-color: #E5E5E5; */
+    background-color: #FAFAFA;
+  
+}
+
+.heroText{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 50px;
+line-height: 60px;
+/* or 142% */
+
+display: flex;
+/* align-itemwas: center; */
+
+color: #FFFFFF;
+
+
+}
+
+.clickButton{
+
+width: 268.26px;
+height: 66.94px;
+border-radius: 35px;
+
+border: 2px solid #FFFFFF;
+// border-radius: 10px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 30px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+display: flex;
+justify-content: center;
+@include btn-animate(white);
+}
+
+
+
+.inputLogin{
+width: 100%;
+padding: 30px 0px;
+border: none;
+border-bottom: 1px solid #D9D9D9;
+background-color: transparent;
+font-size: 20px;
+// font-weight: 700;
+&::placeholder{
+    //  font-weight: 700;
+     opacity: 0.5;
+}
+}
+
+.btnLogin{
+    width: 268.26px;
+  height: 66.94px;
+  border-radius: 35px;
+  
+  
+  background: #142955;
+  /* border: 1px solid #142955; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  cursor: pointer;
+  @include btn-animate(white);
+  }
+
+
+  .mobileWrapper{
+    display: none;
+  }
+
+  .desktopWrapper{
+    display: block;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .desktopWrapper{
+        display: none !important;
+      }
+      .mobileWrapper{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+  }
+
+
+  .clickbtn{
+   text-decoration: underline;
+   font-weight: 700;
+   cursor: pointer;
+   color: #5F6163;
+   border-radius: 35px;
+  }
+
+  .forgotbtn{
+    position: fixed;
+    bottom: 10px;
+    font-size: 18px;
+  }

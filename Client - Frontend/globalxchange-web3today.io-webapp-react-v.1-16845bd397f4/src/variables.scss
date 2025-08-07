@@ -1,0 +1,28 @@
+html {
+  --main-color: #182542;
+  --green-color: #2ea654;
+  --red-color: #da4040;
+  --gray-color: #9a9a9a;
+  --border-color: var(--bordercolor-main);
+  --light-border-color: rgba(229, 229, 229, 0.5);
+  --background-color: #ffffff;
+  --hover-color: rgba(255, 255, 255, 0.2);
+  --light-gray: #a3a3a3;
+  --faint: rgba(255, 255, 255, 0.8);
+  --faint-dark: #f1f1f1;
+  --text-color: #182542;
+  --nvest-color: #182542;
+}
+html[data-theme="dark"] {
+  --main-color: #ffffff;
+  --green-color: #2ea654;
+  --red-color: #da4040;
+  --gray-color: #9a9a9a;
+  --border-color: rgba(255, 255, 255, 0.25);
+  --background-color: #182542;
+  --hover-color: rgba(24, 37, 66, 0.2);
+  --light-gray: #a3a3a3;
+  --faint: rgba(255, 255, 255, 0.2);
+  --faint-dark: #6f5656;
+  --text-color: #ffffff;
+}

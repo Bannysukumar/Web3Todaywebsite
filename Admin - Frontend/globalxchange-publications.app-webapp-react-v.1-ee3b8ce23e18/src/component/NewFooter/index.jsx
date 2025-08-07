@@ -1,0 +1,186 @@
+import React, { useContext, useEffect, useState } from "react";
+import classNames from "./footer.module.scss";
+import axios from "axios";
+
+//assets
+import youtubeIcon from "../../assets/shareIcons/youtube.svg";
+import instagramIcon from "../../assets/shareIcons/instagram.svg";
+import twitterIcon from "../../assets/shareIcons/twitter.svg";
+import linkedinIcon from "../../assets/shareIcons/linkedin.svg";
+import telegramIcon from "../../assets/shareIcons/telegram.svg";
+import redittIcon from "../../assets/shareIcons/reditt.svg";
+import facebookIcon from "../../assets/shareIcons/facebook.svg";
+import { GlobalContex } from "../../globalContext";
+import { useNavigate } from "react-router-dom";
+
+const FooterContainer = () => {
+  const navigate = useNavigate();
+  const { setCategoryId, setAuthorDetails } = useContext(GlobalContex);
+  const [allCategories, setAllCategories] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        `https://publications.apimachine.com/category/publication/638dd769b257b3715a8fbe07`
+      )
+      .then(({ data }) => {
+        console.log(data?.data, "all categories footer");
+        setAllCategories(data.data);
+      });
+  }, []);
+
+  return (
+    <>
+      <div className={classNames.footer}>
+        {/* <div className={classNames.footerBackground}></div> */}
+        <div className={classNames.footerLeft}>
+          <div className={classNames.footerCategories}>
+            <div className={classNames.title}>Categories</div>
+            <div className={classNames.options}>
+              <div
+                onClick={() => {
+                  if (window.location.pathname?.includes("video")) {
+                    setCategoryId(allCategories[0]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/videos/${allCategories[0]?.title}`);
+                  } else {
+                    setCategoryId(allCategories[0]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/articles/${allCategories[0]?.title}`);
+                  }
+                }}
+              >
+                {allCategories[0]?.title}
+              </div>
+              <div
+                onClick={() => {
+                  if (window.location.pathname?.includes("video")) {
+                    setCategoryId(allCategories[1]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/videos/${allCategories[1]?.title}`);
+                  } else {
+                    setCategoryId(allCategories[1]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/articles/${allCategories[1]?.title}`);
+                  }
+                }}
+              >
+                {allCategories[1]?.title}
+              </div>
+              <div
+                onClick={() => {
+                  if (window.location.pathname?.includes("video")) {
+                    setCategoryId(allCategories[2]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/videos/${allCategories[2]?.title}`);
+                  } else {
+                    setCategoryId(allCategories[2]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/articles/${allCategories[2]?.title}`);
+                  }
+                }}
+              >
+                {allCategories[2]?.title}
+              </div>
+              <div
+                onClick={() => {
+                  if (window.location.pathname?.includes("video")) {
+                    setCategoryId(allCategories[3]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/videos/${allCategories[3]?.title}`);
+                  } else {
+                    setCategoryId(allCategories[3]?._id);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    navigate(`/news/articles/${allCategories[3]?.title}`);
+                  }
+                }}
+              >
+                {allCategories[3]?.title}
+              </div>
+            </div>
+          </div>
+          <div className={classNames.footerCategories}>
+            <div className={classNames.title}>Directory</div>
+            <div className={classNames.options}>
+              <div
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  navigate("news/articles");
+                }}
+              >
+                Articles
+              </div>
+              <div
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  navigate("news/videos");
+                }}
+              >
+                Videos
+              </div>
+              <div
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  navigate("news/wapps");
+                }}
+              >
+                WAPPs
+              </div>
+              <div>Markets</div>
+            </div>
+          </div>
+          <div className={classNames.footerCategories}>
+            <div className={classNames.title}>About Us</div>
+            <div className={classNames.options}>
+              <div>Company</div>
+              <div>Careers</div>
+              <div>Newsletter</div>
+              <div>Contact</div>
+            </div>
+          </div>
+          <div className={classNames.footerCategories}>
+            <div className={classNames.title}>Partners</div>
+            <div className={classNames.options}>
+              <div>Authors</div>
+              <div>Advertisers</div>
+              <div>Employers</div>
+              <div>Web3 Creator</div>
+            </div>
+          </div>
+        </div>
+        <div className={classNames.footerRight}>
+          <div className={classNames.footerCategories}>
+            <div className={classNames.title}>Follow Us</div>
+            <div className={classNames.socialHandles}>
+              <div>
+                <img src={youtubeIcon} alt="youtubeIcon" />
+              </div>
+              <div>
+                <img src={instagramIcon} alt="instagramIcon" />
+              </div>
+              <div>
+                <img src={twitterIcon} alt="twitterIcon" />
+              </div>
+              <div>
+                <img src={linkedinIcon} alt="linkedinIcon" />
+              </div>
+              <div>
+                <img src={telegramIcon} alt="telegramIcon" />
+              </div>
+              <div>
+                <img src={redittIcon} alt="redittIcon" />
+              </div>
+              <div>
+                <img src={facebookIcon} alt="facebookIcon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={classNames.terms}>
+        Terms Of services And Privacy Policy © Publishers 2022
+      </div>
+    </>
+  );
+};
+
+export default FooterContainer;

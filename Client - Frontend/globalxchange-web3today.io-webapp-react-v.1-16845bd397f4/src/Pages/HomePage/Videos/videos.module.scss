@@ -1,0 +1,82 @@
+.container {
+  padding: 0 130px;
+}
+
+.videoRow {
+  padding-bottom: 42px 0;
+}
+
+.videoWrapper {
+  display: flex;
+  // align-items: center;
+  overflow-x: scroll;
+  padding: 42px 0;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+}
+.videoCard {
+  // height: 100px;
+  width: 355px;
+  margin-right: 50px;
+  position: relative;
+}
+.cardImage {
+  width: 355px;
+  height: 200px;
+}
+
+.cardImageSmall {
+  width: 282px;
+  height: 172px;
+}
+.videoCardSmall {
+  // height: 100px;
+  // width: 355px;
+  margin-right: 50px;
+}
+.videoTitle {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 29px 0px;
+  padding-bottom: 40px;
+}
+.videoTitleSmall {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 29px 0px;
+}
+
+.authorData {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--font-color);
+  width: 100%;
+}
+
+.authorLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchContainer {
+  width: 250px;
+  // height: 20px;
+  border: 1px solid var(--bordercolor-main);
+  border-radius: 10px;
+  padding: 10px;
+  .searchInput {
+    border: none;
+  }
+}

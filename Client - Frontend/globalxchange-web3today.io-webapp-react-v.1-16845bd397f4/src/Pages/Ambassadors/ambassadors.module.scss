@@ -1,0 +1,107 @@
+.ambassadors {
+  width: 100%;
+  position: relative;
+  padding: 0 100px;
+
+  & > .ambassadorsBanner {
+    // background: var(--bordercolor-main)4d;
+    padding: 4rem 0;
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+
+    & > .contentDiv {
+      position: relative;
+      z-index: 2;
+
+      & > .title {
+        font-size: 2rem;
+        font-weight: 500;
+
+        & > .colorTitle {
+          color: var(--background-color);
+        }
+      }
+
+      & > .para {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-top: 2.5rem;
+      }
+
+      & > .ambassadorBtn {
+        padding: 1rem 1.75rem;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 1rem;
+        display: flex;
+        width: max-content;
+        color: white;
+        background: var(--background-color);
+        border-radius: 35px;
+        align-items: center;
+        margin-top: 2.5rem;
+        transition: all ease-in 0.2s;
+
+        &:hover {
+          scale: 1.05;
+        }
+
+        & > svg {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    & > .imageDiv {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+
+      & > img {
+        width: 70%;
+        max-width: 300px;
+        object-fit: contain;
+      }
+    }
+
+    & > .ambassadorsBannerBackground {
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      top: -1px;
+      bottom: -1px;
+      background: var(--highlight-color);
+      width: 100vw;
+      left: calc((-100vw + 100%) / 2);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ambassadors {
+    padding: 0;
+
+    & > .ambassadorsBanner {
+      flex-direction: column;
+      padding: 3rem 20px;
+
+      & > .contentDiv {
+        width: 100%;
+      }
+
+      & > .imageDiv {
+        width: 100%;
+        & > img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

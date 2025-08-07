@@ -1,0 +1,170 @@
+.mainpagearticle {
+  display: flex;
+
+  @media screen and (max-width: 1000px) {
+    display: block;
+  }
+}
+
+.hrtag {
+  margin-top: -6px !important;
+  margin-bottom: 0px;
+}
+
+.thearticle-data {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  cursor: pointer;
+  width: 70vw;
+
+  @media screen and (min-width: 600px) and (max-width: 1000px) {
+    width: 90vw;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+  }
+}
+
+.articletext {
+  margin-left: 20px;
+}
+
+.articlehead {
+  font-weight: 800;
+  font-size: 17px;
+  color: #1a1a1a;
+  margin-top: -4px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+.articledesc {
+  font-weight: 400;
+  font-size: 14px;
+  color: #1a1a1a;
+  width: 90%;
+  margin-top: 5px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.breadcrumbs {
+  margin-top: 5px;
+  font-weight: 700;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.crumbsdata {
+  display: flex;
+  justify-content: space-between;
+}
+
+.readtime {
+  margin-bottom: 0px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.authordetail {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.authormsg {
+  display: flex;
+}
+
+.artdisp {
+  display: flex;
+}
+
+.imgarticle {
+  width: 20vw;
+  height: 165px;
+  object-fit: cover;
+
+  @media screen and (max-width: 600px) {
+    height: 110px;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1200px) {
+    height: 190px;
+  }
+}
+
+.bgm {
+  background: #f5f5f5;
+  height: calc(100vh - 108px);
+  overflow: scroll;
+  width: calc(100vw - 250px);
+  padding-bottom: 20px;
+
+  @media screen and (max-width: 1200px) {
+    width: auto;
+  }
+}
+
+.vl {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  height: 550px;
+}
+
+.verticaldisp {
+  margin-left: 40px;
+  margin-right: 20px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.rect {
+  width: 12px;
+  height: 12px;
+  left: 251px;
+  top: 178px;
+  background: var(--font-color-opposite);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-left: -5px;
+  border-radius: 20px;
+}
+
+.datetext {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #333333;
+  margin-left: -20px;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.authorname {
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.authordate {
+  margin-left: 10px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}

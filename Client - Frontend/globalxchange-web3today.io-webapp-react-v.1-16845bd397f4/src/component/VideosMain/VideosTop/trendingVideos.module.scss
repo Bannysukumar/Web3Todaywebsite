@@ -1,0 +1,188 @@
+.trendingVideos {
+  border: 0.5px solid var(--bordercolor-main);
+  color: var(--font-color);
+
+  & > .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 0.5px solid var(--bordercolor-main);
+    padding: 0.5rem 0.75rem;
+    border-bottom: 0.5px solid var(--bordercolor-main);
+    background: var(--highlight-color);
+  }
+
+  & > .content {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+
+    & > img {
+      padding: 0.75rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    & > .blacktint {
+      position: absolute;
+      top: 0.75rem;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      right: 0.75rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: var(--font-color-opposite);
+
+      & > div {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        width: 30%;
+
+        & > .title {
+          font-size: 1.75rem;
+          font-weight: 700;
+        }
+
+        & > .mainBtn {
+          font-size: 1.1rem;
+          font-weight: 550;
+          background: var(--background-color);
+          border-radius: 25px;
+          padding: 0.5rem 1.5rem;
+          cursor: pointer;
+          margin-top: 2.5rem;
+          width: max-content;
+          transition: all ease-in 0.2s;
+
+          &:hover {
+            color: #4b2a91;
+            background: white;
+          }
+        }
+      }
+    }
+
+    & > .otherVideosParent {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 0.75rem;
+
+      & > .otherVideos {
+        background: rgba(255, 255, 255, 0.85);
+        height: 220px;
+        width: 600px;
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+        overflow: scroll;
+        border-radius: 15px 0 0 15px;
+        scroll-behavior: smooth;
+
+        & > div {
+          width: 65%;
+          min-width: 65%;
+          position: relative;
+
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
+
+          & > .overlayVideos {
+            visibility: hidden;
+            position: absolute;
+            inset: 0;
+            color: var(--font-color-opposite);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0 1.5rem;
+            padding-bottom: 0.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(0, 0, 0, 0.5);
+            cursor: pointer;
+
+            & > img {
+              padding-top: 1.5rem;
+              padding-bottom: 0.5rem;
+            }
+          }
+
+          &:hover > .overlayVideos {
+            visibility: visible;
+          }
+        }
+      }
+
+      & > .nextBtn {
+        position: absolute;
+        right: 0 !important;
+        top: 50%;
+        height: 45px;
+        width: 47px;
+        // transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 15px 0px 0px 15px;
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 47px;
+        min-width: 47px;
+        transform: translate(0, -50%);
+        z-index: 2;
+
+        & > div {
+          background: var(--background-color);
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & > svg {
+            color: var(--font-color-opposite);
+            font-size: 1.2rem;
+          }
+        }
+      }
+      & > .prevBtn {
+        position: absolute;
+        // rotate: 180deg;
+        left: 0 !important;
+        top: 50%;
+        height: 45px;
+        width: 47px;
+        // transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 15px 0px 0px 15px;
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 47px;
+        min-width: 47px;
+        transform: translate(0, -50%) scaleX(-1);
+        z-index: 2;
+
+        & > div {
+          background: var(--background-color);
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & > svg {
+            color: var(--font-color-opposite);
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

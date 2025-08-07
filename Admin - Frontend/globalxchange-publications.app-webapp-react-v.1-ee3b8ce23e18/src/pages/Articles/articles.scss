@@ -1,0 +1,204 @@
+.thebgm {
+    background: #F5F5F5;
+
+    @media screen and (max-width : 1000px) {
+        width: 100vw;
+    }
+}
+
+.coinsdata {
+    display: flex;
+}
+
+.coinsty {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.chartdisp {
+    padding: 8px 15px;
+    border-right: 1px solid #DFE2E4;
+    border-bottom: 1px solid #DFE2E4;
+    background: white;
+}
+
+.thecoins {
+    margin-left: 15px;
+}
+
+.coinsym {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: #999A9D;
+}
+
+.coinrate {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.coinchange {
+    font-weight: 700;
+    font-size: 13px;
+    color: #EC1C69;
+}
+
+.theheight {
+    height: 51px;
+    width: calc(100vw - 250px);
+    overflow: scroll;
+
+    @media screen and (max-width : 1000px) {
+        width: 100vw;
+    }
+}
+
+.thepagecrumb {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    @media screen and (max-width : 1000px) {
+        margin-left: 20px;
+    }
+}
+
+.art-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 48px;
+    color: #2A2B2C;
+    width: 50vw;
+
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.art-desc {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #2A2B2C;
+    margin-top: 10px;
+    width: 50vw;
+
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.theauthordata {
+    display: flex;
+    align-items: center;
+}
+
+.thedataauth {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.mainartimg {
+    width: 50vw;
+
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.articlepara {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+    color: #2A2B2C;
+    width: 30vw;
+    margin-left: auto;
+    margin-top: 30px;
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.discdata {
+    font-size: 15px;
+    color: #999A9D;
+    font-weight: 700;
+    width: 30vw;
+    margin-left: auto;
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.textsub {
+    text-align: center;
+    width: 50vw;
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.themailss {
+    margin-left: auto;
+    border-top: 0.5px solid gray;
+    padding: 20px;
+    width: 30vw;
+    @media screen and (max-width : 1000px) {
+        padding: 0px;
+        width: 90vw;
+    }
+}
+
+.themailtext {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.mailtag {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.emaill {
+    width: 30vw;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+    }
+}
+
+.btnn {
+    width: 30vw;
+    background: #000000;
+    padding: 15px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+        margin-bottom: 50px;
+    }
+}
+
+.themailform{
+    @media screen and (max-width : 1000px) {
+        width: 90vw;
+        text-align: center;
+    }
+}

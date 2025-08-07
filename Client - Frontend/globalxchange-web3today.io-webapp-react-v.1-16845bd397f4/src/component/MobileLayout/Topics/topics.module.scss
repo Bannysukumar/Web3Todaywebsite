@@ -1,0 +1,70 @@
+.topicsMobile {
+  height: 100%;
+
+  & > .heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 20px;
+  }
+  & > .allTopics {
+    // overflow-y: scroll;
+    // height: calc(100% - 160px);
+    overflow: auto;
+    height: auto;
+    padding: 0 20px;
+    padding-bottom: 120px;
+
+    & > .eachTopic {
+      padding: 1.5rem;
+      background: var(--font-color-opposite);
+      border: 1px solid var(--bordercolor-main);
+      border-radius: 25px;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      & > img {
+        width: 32.5px;
+        height: 32.5px;
+      }
+
+      & > div {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  & > .filterType {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    background: var(--highlight-color);
+    border-radius: 35px;
+    padding: 10px;
+    margin: 5px 20px;
+    margin-top: 1.5rem;
+    // border-bottom: 1px solid var(--bordercolor-main);
+
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 42.5%;
+      padding: 0.75rem 0;
+      cursor: pointer;
+      border-radius: 35px;
+      font-weight: 400;
+      transition: all ease-in 0.2s;
+
+      &:hover {
+        background: rgb(229, 229, 229, 0.5);
+        // align-items: flex-end;
+      }
+    }
+  }
+}

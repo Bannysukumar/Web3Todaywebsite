@@ -1,0 +1,100 @@
+.templateSearch{
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 0.5px solid #E5E5E5;
+    border-width: 0px 0px 0px 0px;
+    height: 80px;
+    padding:0px 80px;
+}
+
+
+
+.mainSection{
+    background: #FFFFFF;
+    border-top: 0.5px solid #E5E5E5;
+    // border-bottom: 0.5px solid #E5E5E5;
+    border-radius: 0px;
+    // height: 219px;
+    display: grid;
+    grid-template-columns: 4.2fr 5fr;
+
+    .textSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // border-right: 0.5px solid #E5E5E5;
+        padding: 40px 80px;
+        .textHeader{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 45px;
+            /* or 180% */
+            display: flex;
+            align-items: center;
+           
+            color: #182542;
+            padding-left: 10px;
+        }
+        .textDesc{
+            padding-top: 25px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 30px;
+            /* or 250% */
+
+            display: flex;
+            align-items: center;
+
+            color: #182542;
+        }
+        .goButton{
+            width: 32px;
+            height: 32px;
+            background: #F3F4F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+                transition: 0.2s all ease-in-out;
+            }
+        }
+    }
+    .scrollSection{
+        display: flex;
+        align-items: center;
+        // grid-row: auto;
+        // grid-template-columns: 1fr;
+        // overflow-x: scroll;
+        // width: 700px;
+        display: grid;
+        grid-gap: 16px;
+        padding: 16px;
+        grid-template-columns: repeat(auto-fill,minmax(288px,1fr));
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(288px,1fr);
+        overflow-x: auto;
+
+        .scrollCards{
+            width: 288px !important;
+            height: 181px;
+            background: #FFFFFF;
+            border: 0.5px solid #E5E5E5;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.03);
+                transition: 0.2s all ease-in-out;
+            }
+        }
+    }
+}

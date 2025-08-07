@@ -1,0 +1,233 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.grid-cap {
+    position: relative;
+    height: 100%;
+    display: grid;
+    // grid-template-columns: 0.2fr 1fr 6fr;
+}
+
+.grid-cap-collapsed {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.2fr 6fr;
+}
+
+.tabInterface {
+    display: flex;
+    grid-template-columns: 2fr 4fr 2fr;
+    // justify-content: space-between;
+    align-items: center;
+    // background-color: red;
+    height: 80px;
+    border-bottom: 1px solid #e7e7e780;
+
+}
+
+.searchGlobal {
+    width: calc(100vw - 724px);
+    border: none;
+    border-right: 1px solid #e7e7e780;
+    height: 79px;
+    position: relative;
+}
+
+.searchGlobal1 {
+    width: calc(100vw - 824px);
+    border: none;
+    border-right: 1px solid #e7e7e780;
+    height: 79px;
+    position: relative;
+}
+
+.cardWrapper {
+    position: absolute;
+    right: 119px;
+    top: 80px;
+    background: white;
+    width: 500px;
+    height: calc(100vh - 125px);
+    z-index: 10;
+    border: 0.5px solid #E7E7E7;
+    border-top: none;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.selectedCard {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    border: 0.5px solid #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.listedCards {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    border: 0.5px solid #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0.3;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.selectedText {
+    position: absolute;
+    top: 130px;
+    color: #212529;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.hrline {
+    border: 0.5px solid #E7E7E7;
+    margin-top: 60px;
+}
+
+.listCard {
+    overflow: scroll;
+    height: calc(100vh - 410px);
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 600px;
+}
+
+
+.imageCard {
+    width: 60px;
+    height: 60px;
+}
+
+.cardTitle {
+    color: #212529;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 20px 30px;
+}
+
+.selectModal {
+    border-right: 1px solid #e7e7e780;
+    width: 100px;
+    height: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.greySearch {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+
+}
+
+.inputGlobal {
+    width: -webkit-fill-available;
+    border: none;
+    align-items: center;
+    display: flex;
+    height: 79px;
+    padding-left: 50px;
+
+    &::placeholder {
+        color: #C5C8D0;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+
+.filterRow {
+    // background-color: yellowgreen;
+    border-bottom: 1px solid #e7e7e780;
+    height: 50px;
+}
+
+.tabsWrapper {
+    display: flex;
+    overflow-x: scroll;
+    width: 240px;
+
+    .tabs {
+        position: relative;
+        // flex: 0 0 290px;
+        height: 79px;
+        background-color: white;
+        border-right: 1px solid #e7e7e780;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        cursor: pointer;
+        min-width: 240px;
+        // justify-content: center;
+
+        .tabIcon {
+            width: 30px;
+        }
+
+        .tabName {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            padding-left: 10px;
+            color: #2E2D2D;
+        }
+
+        .cross {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            width: 9px;
+            height: 9px;
+            cursor: pointer;
+        }
+    }
+}
+
+.addNew {
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 121px;
+    height: 36.41px;
+    color: white;
+
+    background: #78C92E;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.ant-typography-copy {
+    color: gray;
+}
+
+div.ant-typography {
+    margin-bottom: 0px;
+}

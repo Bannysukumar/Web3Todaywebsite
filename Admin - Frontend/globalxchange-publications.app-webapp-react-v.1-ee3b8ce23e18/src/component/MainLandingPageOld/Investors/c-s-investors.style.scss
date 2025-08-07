@@ -1,0 +1,208 @@
+.c-s-investors {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5% 0;
+  .c-s-i-header {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h5,
+    h1 {
+      margin: 0;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 300%;
+    }
+  }
+  .c-s-i-mid {
+    height: 40%;
+    width: 50%;
+    position: relative;
+    margin: 7vh 0;
+    .moving-card {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 55%;
+      height: 100%;
+      transform: translate(-50%, 0);
+      transition: 0.3s;
+      border: 1px solid var(--border-color);
+      background-color: white;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5%;
+      cursor: pointer;
+      h4,
+      p,
+      h6 {
+        margin: 0;
+      }
+      h4 {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        img {
+          height: 22px;
+          margin-right: 10px;
+        }
+      }
+      div {
+        margin: 2vh 0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      h6 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          width: 40%;
+          padding: 6px;
+          margin: 0 10px;
+          border: 0;
+          font-size: 85%;
+          font-weight: 600;
+          &:nth-child(1) {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+          }
+          &:nth-child(2) {
+            background-color: var(--main-color);
+            color: white;
+          }
+        }
+      }
+    }
+    .left-one {
+      transition: 0.3s;
+      transform: translate(-90%, 5%) scale(0.85);
+      z-index: 4;
+    }
+    .left-two {
+      transition: 0.3s;
+      transform: translate(-130%, 10%) scale(0.7);
+      z-index: 3;
+    }
+    .right-one {
+      transition: 0.3s;
+      transform: translate(-10%, 5%) scale(0.85);
+      z-index: 4;
+    }
+    .right-two {
+      transition: 0.3s;
+      transform: translate(30%, 10%) scale(0.7);
+      z-index: 3;
+    }
+    .others {
+      transition: 0.3s;
+      z-index: -1;
+      transform: translate(-50%, 0) scale(0.2);
+    }
+  }
+  .c-s-i-bottom {
+    height: auto;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .c-s-i-para {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      margin-bottom: 3vh;
+      p {
+        text-align: center;
+        font-size: 105%;
+        line-height: 1.8rem;
+      }
+    }
+    .c-s-i-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 38%;
+        margin: 0 10px;
+        font-size: 85%;
+        font-weight: 600;
+        padding: 8px 0;
+        &:nth-child(1) {
+          background-color: transparent;
+          border: 1px solid var(--main-color);
+        }
+        &:nth-child(2) {
+          background-color: var(--main-color);
+          border: 1px solid var(--main-color);
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .c-s-investors {
+    height: auto;
+    overflow-y: hidden;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    .c-s-i-header {
+      width: 100%;
+      padding: 20px 0;
+      h1, h5 {
+        text-align: center;
+        font-size: 200%;
+      }
+      h5{
+        margin-bottom: 5vh;
+      }
+    }
+    .c-s-i-mid {
+      height: auto;
+      width: 100%;
+      height: 35vh;
+      margin: 5vh 0;
+      overflow: hidden;
+      .moving-card {
+        height: 35vh;
+        width: 80%;
+        justify-content: space-evenly;
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .c-s-i-bottom {
+      width: 100%;
+      padding-bottom: 20px;
+      .c-s-i-para {
+        margin: 2vh 0;
+        margin-bottom: 5vh;
+        p {
+          font-size: 85%;
+        }
+      }
+      .c-s-i-buttons {
+        button {
+          width: 48%;
+        }
+
+      }
+    }
+  }
+}

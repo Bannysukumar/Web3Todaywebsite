@@ -1,0 +1,36 @@
+@import "../../assets/scss/colors";
+
+.lgbutton{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+    width: 100%;
+    height: 65.94px;
+
+    background: $app-color;
+    border: 1px solid $app-color;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .logininput{
+    font-family: 'Montserrat';
+    font-style: normal;
+    // font-weight: 700;
+
+    font-size: 16px;
+    /* or 406% */
+    color: #5F6163;
+    }
+    .mobfooter{
+      background: $app-color;
+      padding: 25px 0px;
+      text-align: center;
+    }

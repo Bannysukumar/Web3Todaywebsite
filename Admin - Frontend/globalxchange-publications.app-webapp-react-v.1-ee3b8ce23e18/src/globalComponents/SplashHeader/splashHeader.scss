@@ -1,0 +1,200 @@
+
+.topIcons{
+    position: relative;
+    border-right: 0.5px solid #E5E5E5;
+   &:hover{
+    pointer-events: auto;
+    cursor: pointer;
+    background-color: rgba(24, 25, 29, 0.1);
+    /* color: white; */
+    -ms-transform: scale(1.02); /* IE 9 */
+      -webkit-transform: scale(1.02); /* Safari 3-8 */
+      transform: scale(1.02); 
+      transition: 0.3s all ease-in-out;
+      opacity: 1 !important;
+   }
+    .tooltip{
+      visibility: hidden;
+    }
+   
+  }
+
+  .topIcons1{
+    position: relative;
+    border-left: 0.5px solid #E5E5E5;
+   &:hover{
+    pointer-events: auto;
+    cursor: pointer;
+    background-color: rgba(24, 25, 29, 0.1);
+    /* color: white; */
+    -ms-transform: scale(1.02); /* IE 9 */
+      -webkit-transform: scale(1.02); /* Safari 3-8 */
+      transform: scale(1.02); 
+      transition: 0.3s all ease-in-out;
+      opacity: 1 !important;
+   }
+    .tooltip{
+      visibility: hidden;
+    }
+   
+  }
+
+  .grid{
+    z-index: inherit;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height:auto;
+    padding:0px;
+    grid-gap: 0ch;
+    border: 0.5px solid #E5E5E5;
+    & > div { 
+     
+      display: flex;
+      align-items: center;
+        justify-content: center;
+        height: 67px;
+       border-right: 0.5px solid #E5E5E5;
+  
+       &:nth-child(9){
+        background-color: #182542;
+        color: white;
+        border-right: none;
+        height: 100.79%;
+        width: 100.3%;
+        &:hover{
+          background-color: #182542 !important;
+          color: white !important;
+        }
+      }
+      &:nth-child(n+3){
+       
+        &:hover{
+          pointer-events: auto;
+          cursor: pointer;
+          background-color: rgba(24, 25, 29, 0.1);
+          /* color: white; */
+          -ms-transform: scale(1.01); /* IE 9 */
+            -webkit-transform: scale(1.01); /* Safari 3-8 */
+            transform: scale(1.01); 
+            transition: 0.2s all ease-in-out;
+            opacity: 1 !important;
+            color: #182542;
+        }
+      }
+    }
+    
+    
+  }
+  .gridNoBorder{
+    z-index: inherit;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height:auto;
+    padding:0px;
+    grid-gap: 0ch;
+    & > div { 
+      display: flex;
+      align-items: center;
+        justify-content: center;
+        height: 67px;
+       border: 0.5px solid rgba(229, 229, 229, 0.04);  
+      &:nth-child(9){
+        // background-color: #656565 !important;
+        background-color: #182542;
+        color: white;
+        opacity: 0.4;
+      }
+    }
+    
+  }
+  
+  
+  .gridTwo{
+    z-index: inherit;
+    display: grid;
+    grid-template-columns: 1.1fr 9.9fr 1.1fr;
+    height:auto;
+    padding:0px;
+    grid-gap: 0ch;
+    border-right: 0.5px solid #E5E5E5;
+    & > div {
+      display: flex;
+      align-items: center;
+        justify-content: center;
+        height: 40px;
+     }  
+  }
+  
+  
+  .gridThree{
+    z-index: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height:auto;
+    padding:0px;
+    grid-gap: 0ch;
+    & > div { 
+      display: flex;
+      align-items: center;
+        justify-content: center;
+        height: 67px;
+       border: 0.5px solid rgba(229, 229, 229, 0.04);  
+      &:nth-child(8){
+        // background-color: #656565 !important;
+        background-color: #182542;
+        color: white;
+        opacity: 0.4;
+      }
+    }
+    
+  }
+
+  .searchBox {
+    width: 100%;
+    height: 65px;
+    // background: #FFFFFF;
+    // border: 0.5px solid #E7E7E7;
+    // border-radius: 15px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+  
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
+    
+    color:  #182542;
+  }
+  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+  
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.002em;
+  
+  color: #182542;
+  
+  opacity: 0.25;
+  }
+
+  .selectednav{
+    font-weight: 700;
+    // border-bottom: 2px solid #182542;
+    border-width: 3px;
+    color: #182542;
+  }
+  .nonselectednav{
+    // font-weight: 700;
+    // border-bottom: 2px solid #182542;
+    border-width: 3px;
+    color: #182542;
+  }

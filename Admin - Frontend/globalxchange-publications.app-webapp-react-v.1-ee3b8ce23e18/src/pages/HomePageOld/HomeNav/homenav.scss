@@ -1,0 +1,75 @@
+.headtag {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.headdesc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5D646A;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.navhead {
+    display: flex;
+    width: 75vw;
+    overflow: scroll;
+}
+
+.homebox {
+    margin: 20px;
+    margin-bottom: 5px !important;
+}
+
+.navtext {
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.mainnav {
+    &:not(:first-child) {
+        margin-left: 25px;
+    }
+}
+
+.navdata {
+    display: flex;
+    opacity: 0.4;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 10px;
+
+    &.active {
+        opacity: 1 !important;
+        font-weight: 700;
+        border-bottom: 2px solid black;
+        padding-bottom: 6px;
+    }
+}
+
+.mobilehead {
+    height: 67px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (min-width : 1000px) {
+        display: none;
+    }
+}
+
+.mainimg{
+    display: flex;
+    align-items: center;
+}
+
+.maintext{
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 5px;
+}

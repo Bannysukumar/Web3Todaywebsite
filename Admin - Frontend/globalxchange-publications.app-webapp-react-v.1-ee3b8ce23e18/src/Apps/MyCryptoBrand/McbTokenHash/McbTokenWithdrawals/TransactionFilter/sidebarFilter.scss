@@ -1,0 +1,280 @@
+@import "../../../../../static/scss/colors";
+
+.godsEyeUserFiter {
+    flex: 0 0 480px;
+    max-width: 480px;
+    border-left: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .headTabs {
+      display: flex;
+      height: 50px;
+      border-bottom: 1px solid $border-color;
+      justify-content: space-evenly;
+      .tab {
+        cursor: pointer;
+        flex: 0 0 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-size: 18px;
+        transform: all 300ms ease;
+        &.true {
+          font-weight: 700;
+          font-size: 20px;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: $primary-black;
+          }
+        }
+        &.false {
+          font-weight: 500;
+          opacity: 0.6;
+        }
+        &:hover {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+    .godsEyeFilterDisplay {
+      flex: 1;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      .labelItm {
+        font-weight: 500;
+        color: $primary-black;
+        margin-bottom: 10px;
+      }
+      .options {
+        display: flex;
+        height: 50px;
+        margin-bottom: 30px;
+        .option {
+          width: 130px;
+          border: 1px solid $border-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          &.true {
+            border-color: $primary-black;
+          }
+        }
+      }
+      .box {
+        display: flex;
+        height: 50px;
+        width: 80%;
+        margin-bottom: 20px;
+        border: 1px solid $border-color;
+        text-align: center;
+        .label {
+          flex: 0 0 32%;
+          border-right: 1px solid $border-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .value {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 0;
+          flex: 1;
+          border: none;
+          background: none;
+          outline: none;
+        }
+      }
+    }
+    .godsEyeFilterBanker {
+      flex: 1;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      .searchInp {
+        margin: 20px 0;
+        height: 55px;
+        border: 1px solid $border-color;
+        display: flex;
+        font-size: 22px;
+        padding: 0 20px;
+        align-items: center;
+        input {
+          flex: 1;
+          border: none;
+          background: none;
+        }
+      }
+      .itemListScroll {
+        height: 0 !important;
+        flex: 1;
+        > div {
+          padding: 0;
+          .item {
+            cursor: pointer;
+            border: 1px solid $border-color;
+            height: 90px;
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            margin-bottom: 10px;
+            .coin {
+              width: 32px;
+              height: 32px;
+              margin-right: 10px;
+              object-fit: contain;
+            }
+            span {
+              font-size: 18px;
+              font-weight: 600;
+            }
+            .count {
+              margin-left: auto;
+            }
+            * {
+              transition: all 300ms ease;
+            }
+            &.true {
+              background: whitesmoke;
+            }
+            &:hover {
+              * {
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+      }
+    }
+    .footerBtns {
+      height: 65px;
+      border-top: 1px solid $border-color;
+      display: flex;
+      z-index: 1;
+      .btnReset,
+      .btnSave {
+        cursor: pointer;
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 600;
+        transition: all 300ms ease;
+        &:hover {
+          font-size: 22px;
+        }
+      }
+      .btnReset {
+        background: $primary-black;
+        color: white;
+      }
+    }
+    .footerPage {
+      flex: 0 0 80px;
+      max-height: 80px;
+      border-top: 1px solid $border-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        height: 50%;
+        margin-right: 15px;
+      }
+      span {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      &:hover {
+        background: whitesmoke;
+        zoom: 1.05;
+      }
+    }
+    .userHeads {
+      border-bottom: 1px solid $border-color;
+      display: flex;
+      height: fit-content;
+      padding: 25px 20px;
+      align-items: center;
+      display: flex;
+      img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin-right: 10px;
+        overflow: hidden;
+        border: 1px solid $border-color;
+      }
+      .detail {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .name {
+          font-size: 21px;
+          font-weight: 600;
+          line-height: 1.2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .email {
+          text-transform: capitalize;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          span {
+            cursor: pointer;
+            margin: 0 2px;
+            &:last-of-type,
+            &:hover {
+              font-weight: 600;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .userStats {
+      flex: 1;
+      padding: 30px;
+      color: $primary-black;
+      .userStatsTitle {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 1;
+      }
+      .userCountBox {
+        margin-top: 40px;
+        height: 60px;
+        border: 1px solid $border-color;
+        display: flex;
+        .label,
+        .value {
+          display: flex;
+          flex: 0 0 50%;
+          align-items: center;
+          font-weight: 600;
+        }
+        .label {
+          padding-left: 20px;
+          border-right: 1px solid $border-color;
+        }
+        .value {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  

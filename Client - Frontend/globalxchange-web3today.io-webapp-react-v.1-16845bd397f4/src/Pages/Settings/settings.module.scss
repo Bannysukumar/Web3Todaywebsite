@@ -1,0 +1,67 @@
+.container {
+  padding-left: 140px;
+  padding-right: 80px;
+  padding-top: 40px;
+  padding-bottom: 58px;
+  // padding: 58px 140px;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 28px;
+  border-bottom: 0.5px solid var(--bordercolor-main);
+}
+.header {
+  font-weight: 600;
+  font-size: 35px;
+}
+.breadcrumb {
+  font-weight: 400;
+  font-size: 22px;
+  padding-top: 20px;
+}
+.profilePicture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  // background-color: lightgray;
+  // margin-right: 20px;
+  border: 1px solid var(--bordercolor-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding-top: 50px;
+
+  :nth-child(2) {
+    opacity: 0.5;
+  }
+  :nth-child(3) {
+    opacity: 0.5;
+  }
+}
+.settingsItem {
+  padding: 50px 30px;
+  border: 0.5px solid var(--bordercolor-main);
+  border-radius: 15px;
+  cursor: pointer;
+  :nth-child(1) {
+    font-weight: 700;
+    font-size: 22px;
+  }
+  :nth-child(2) {
+    font-weight: 400;
+    font-size: 15px;
+  }
+}

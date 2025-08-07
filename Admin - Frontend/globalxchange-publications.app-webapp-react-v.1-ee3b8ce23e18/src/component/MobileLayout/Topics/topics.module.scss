@@ -1,0 +1,36 @@
+.topicsMobile {
+  height: 100%;
+
+  & > .heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 20px;
+  }
+  & > .allTopics {
+    overflow-y: scroll;
+    height: calc(100% - 160px);
+    padding: 0 20px;
+    padding-bottom: 120px;
+
+    & > .eachTopic {
+      padding: 1.5rem;
+      background: #ffffff;
+      border: 1px solid #e7e7e7;
+      border-radius: 25px;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+
+      & > img {
+        width: 32.5px;
+        height: 32.5px;
+      }
+
+      & > div {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

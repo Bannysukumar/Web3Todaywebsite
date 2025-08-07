@@ -1,0 +1,26 @@
+.search-Style {
+  margin: 0 35px;
+  height: 60px;
+  flex: 0 0 60px;
+  display: flex;
+  align-items: center;
+  background: var(--font-color-opposite);
+  border: 1px solid var(--bordercolor-main);
+  border-radius: 10px;
+}
+
+.appText {
+  margin: 35px;
+}
+
+.assetDispText {
+  margin: 0 35px;
+  height: calc(100vh - 175px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 13px;
+  color: #2e2d2d;
+  text-align: center;
+}

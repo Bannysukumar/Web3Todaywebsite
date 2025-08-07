@@ -1,0 +1,126 @@
+.footerWrapper {
+  height: 600px;
+  background-color: #f8f8f8;
+}
+
+/* Define the style for the footer container */
+.footer {
+  display: flex; /* Use the flexbox layout */
+  justify-content: space-between; /* Distribute the columns evenly */
+  height: 350px;
+  padding: 5vh 100px;
+  .column {
+    // flex: 1;  /* Use equal width for each column */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  div {
+    div {
+      &:hover {
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+    }
+  }
+  .column:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+}
+.connect {
+  background: var(--background-color);
+  height: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 100px;
+  .left {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    border-right: 1px solid white;
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 40px;
+      color: var(--font-color-opposite);
+    }
+    img {
+      height: 45px;
+      width: 45px;
+      margin-right: 40px;
+    }
+    div {
+      img {
+        &:hover {
+          transform: scale(1.2);
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding-left: 120px;
+
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 40px;
+      color: var(--font-color-opposite);
+    }
+    .input {
+      width: 60%;
+      height: 70px;
+      border-radius: 25px 0px 0px 25px;
+      border: none;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .inputWrapper {
+      display: flex;
+      // align-items: center;
+    }
+    .inputButton {
+      width: 20%;
+      height: 70px;
+
+      border: none;
+      background: var(--background-color);
+      color: #4b2a91;
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      background-color: #ededed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0px 25px 25px 0px;
+    }
+  }
+}
+.copyright {
+  background: var(--background-color);
+  color: var(--font-color-opposite);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0px 100px;
+
+  div {
+    padding: 20px 0px;
+  }
+}

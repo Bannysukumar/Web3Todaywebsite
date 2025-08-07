@@ -1,0 +1,127 @@
+.bggm {
+    background: #4B2A91;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px)
+}
+
+.bottomtext {
+    color: white;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.devtext {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: #4B2A91;
+
+    @media screen and (max-width : 900px) {
+        font-size: 21px;
+    }
+}
+
+
+.thetab {
+    width: 400px;
+    height: 500px;
+    background: #FFFFFF;
+    border: 1px solid rgba(88, 87, 87, 0.5);
+    border-radius: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (max-width : 900px) {
+        width: 80%;
+        height: 400px;
+    }
+
+}
+
+.theshadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.tabimg {
+    text-align: center;
+    margin-top: 65px;
+}
+
+
+.dispotp {
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    @media screen and (max-width : 900px) {
+        margin-top: 30px;
+    }
+}
+
+.otpInputWrapper {
+    width: 100%;
+    justify-content: space-around;
+   
+}
+
+.otpInput {
+    width: 75px !important;
+    height: 75px;
+    border: 2px solid #e7e7e7;
+    border-radius: 8px;
+    font-size: 28px;
+    @media screen and (max-width : 900px) {
+        width: 50px !important;
+        height: 50px;
+    }
+}
+
+.btmtabbtn {
+    position: absolute;
+    bottom: -1px;
+    background: #4B2A91;
+    width: 101%;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.clstxt {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.theweb3img {
+    @media screen and (max-width : 900px) {
+        display: none;
+    }
+}
+
+.mobweb3img {
+    @media screen and (min-width : 900px) {
+        display: none;
+    }
+}
+
+.mobtext {
+    font-size: 36px;
+    color: white;
+    font-weight: 400;
+    margin-top: 50px;
+}

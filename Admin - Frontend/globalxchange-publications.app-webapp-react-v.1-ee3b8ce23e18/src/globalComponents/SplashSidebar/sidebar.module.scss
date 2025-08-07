@@ -1,0 +1,110 @@
+.goButton{
+    width: 32px;
+    height: 32px;
+    background: #F3F4F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotate(-180deg);
+    &:hover{
+        cursor: pointer;
+        transform: rotate(-180deg) scale(1.2);
+        transition: 0.2s all ease-in-out;
+       
+    }
+  }
+
+  .title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #182542;
+
+  }
+
+  .subtitle{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    color: #182542;
+  }
+
+  .menuHover{
+    // border:0.5px solid white;
+    &:hover{
+    // border:0.5px solid #E5E5E5;
+    // border-radius: 10px;
+      pointer-events: auto;
+      cursor: pointer;
+      // background-color: rgba(24, 25, 29, 0.1);
+      /* color: white; */
+      -ms-transform: scale(1.01); /* IE 9 */
+        -webkit-transform: scale(1.01); /* Safari 3-8 */
+        transform: scale(1.01); 
+        transition: 0.2s all ease-in-out;
+        opacity: 1 !important;
+        
+    }
+  }
+
+  .tooltipVisible1{
+    visibility: visible;
+    position: absolute;
+    
+    width: 370px;
+    height: 100%;
+    left:0px;
+    top: 0px;
+    
+    background: #FFFFFF;
+    // border: 0.5px solid #E5E5E5;
+    // border-radius: 15px;
+    
+  }
+  
+  .tooltipHidden1{
+    visibility: hidden;
+    position: absolute;
+  
+    
+  width: 560px;
+  height: 717px;
+  left: 39px;
+  top: 60px;
+  
+  background: #FFFFFF;
+  border: 0.5px solid #E5E5E5;
+  border-radius: 15px;
+  
+  }
+  
+  .coinInput{
+    width: 100%;
+    height: 65px;
+    background: #FFFFFF;
+    border: 0.5px solid #E7E7E7;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
+    
+    color: #182542;
+  }

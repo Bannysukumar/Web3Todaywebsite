@@ -1,0 +1,221 @@
+.stcky {
+  z-index: 1;
+}
+.player {
+  width: 100%;
+  overflow-y: hidden;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  overflow-x: hidden;
+  .player-inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .spendDetail {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    /* or 127% */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 156px;
+    height: 44px;
+    background: var(--background-color);
+    border-radius: 35px;
+    color: var(--font-color-opposite);
+    justify-content: center;
+    &:hover {
+      scale: 1.08;
+    }
+  }
+  .w-space {
+    width: 100%;
+    height: 4%;
+    padding: 0 3rem;
+    border-bottom: 1px solid var(--bordercolor-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .each-option {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        margin-bottom: 0;
+        color: var(--font-color);
+        font-size: 0.9rem;
+      }
+      div {
+        display: flex;
+        gap: 5px;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        &:hover {
+          scale: 1.1;
+        }
+      }
+    }
+    .optionss {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      .each-option-selected {
+        background: rgba(229, 229, 229, 0.25);
+        font-weight: 600;
+        padding: 10px 1rem;
+        border-radius: 5px;
+      }
+      .each-option {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          margin-bottom: 0;
+          color: var(--font-color);
+          font-size: 0.9rem;
+        }
+        div {
+          display: flex;
+          gap: 5px;
+          transition: all ease 0.3s;
+          cursor: pointer;
+          &:hover {
+            scale: 1.1;
+          }
+        }
+      }
+      .hamburger {
+        color: var(--font-color);
+        font-weight: 700;
+        display: flex;
+        p {
+          margin-bottom: 0;
+        }
+        .hov-animate {
+          transition: all ease 0.3s;
+          &:hover {
+            scale: 1.08;
+          }
+        }
+      }
+      .top-icons {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        div {
+          height: 100%;
+          padding: 0 2rem;
+          display: flex;
+          border-right: 0.25px solid var(--bordercolor-main);
+          align-items: center;
+          img {
+            height: 50%;
+          }
+        }
+      }
+    }
+  }
+  .player-navbar {
+    width: 100%;
+    height: 8%;
+    border-bottom: 1px solid var(--bordercolor-main);
+    display: flex;
+    align-items: center;
+    padding: 1rem 3rem;
+
+    .academy-icon {
+      width: 10%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 1.35rem;
+      font-weight: 650;
+      color: var(--font-color);
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+
+    .search-academy {
+      width: 45%;
+      height: 100%;
+      border: 0.5px solid #ededed;
+      // background: var(--highlight-color);
+      background: white;
+      border-radius: 5px;
+      padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-left: 0.75rem;
+      .all {
+        width: 32%;
+        height: 100%;
+        border-right: 3px solid var(--bordercolor-main);
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        color: var(--font-color);
+        font-weight: 700;
+        opacity: 0.25;
+        padding-right: 20px;
+        justify-content: space-between;
+        p {
+          margin-bottom: 0;
+        }
+        .arroww {
+          display: flex;
+          align-items: center;
+          img {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+      .im {
+        width: 100%;
+        height: 100%;
+        // padding-left: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1rem;
+        color: var(--font-color);
+        font-weight: 700;
+        // opacity: 0.25;
+        gap: 1rem;
+        input {
+          border: none;
+          font-size: 1rem;
+          color: var(--font-color);
+          font-weight: 700;
+          background: transparent;
+        }
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .stcky {
+    z-index: 999999;
+  }
+}

@@ -1,0 +1,11 @@
+.casestudy {
+  width: 100%;
+  position: relative;
+  padding: 0 100px;
+}
+
+@media screen and (max-width: 800px) {
+  .casestudy {
+    padding: 0;
+  }
+}

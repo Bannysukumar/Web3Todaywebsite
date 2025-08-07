@@ -1,0 +1,71 @@
+.stepOneTitle{
+    height: 112px;
+    align-items: center;
+    padding: 0px 27px;
+}
+
+.stepTwoTitle{
+    height: 112px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 5fr 0.45fr;
+    align-items: center;
+    padding: 0px 27px;
+}
+
+.backButton{
+    border: 0.5px solid #E7E7E7;
+    width: 35px;
+    height: 35px;
+}
+
+.revStats{
+   
+    .revTitle{
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .revSubtitle{
+        font-weight: 400;
+        font-size: 11px;
+    }
+}
+.tableHeader{
+    background: #FAFAFA;
+    border: 0.5px solid #E7E7E7;
+    height: 31px;
+}
+
+.indTitle{
+    font-weight: 700;
+    font-size: 15px;
+}
+.indSubTitle{
+    font-weight: 400;
+    font-size: 12px; 
+}
+.reansactionWrapper{
+    display: flex;
+    align-items: center;
+    
+   
+}
+.transactionData{
+    padding-left: 10px;
+    & > div:nth-child(1){
+        font-weight: 700;
+        font-size: 13px;
+    } 
+    & > div:nth-child(2){
+        font-weight: 400;
+        font-size: 10px;
+    }    
+}
+
+@media only screen and (max-width: 600px) {
+    .mobileDefaultStep{
+        padding-bottom: 20vh;
+        height: 100vh; 
+        display: block;
+    }
+}
+

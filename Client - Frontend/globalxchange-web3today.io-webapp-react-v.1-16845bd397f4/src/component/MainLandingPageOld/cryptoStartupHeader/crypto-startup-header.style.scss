@@ -1,0 +1,81 @@
+.crypto-startup-header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .c-s-h-country {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5vh;
+    &:hover {
+      h6 {
+        transition: 0.3s;
+        transform: scale(1.05);
+      }
+    }
+    h6 {
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      img {
+        height: 22px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .about-crypto-startup{
+      padding-left: 5vh;
+      p{
+          margin: 0;
+      }
+      img{
+          height: 25px;
+      }
+
+  }
+  .c-s-h-logo {
+    height: 50%;
+    img {
+      height: 100%;
+    }
+  }
+  .c-s-h-app-menu {
+    position: absolute;
+    right: 0vh;
+
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5vh;
+    button {
+      background-color: transparent;
+      border: 0;
+      margin-left: 2vh;
+      cursor: pointer;
+      &:hover {
+          img{
+            transition: 0.3s;
+            transform: scale(1.15);
+          }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .crypto-startup-header {
+    .c-s-h-app-menu {
+      display: none;
+    }
+
+}
+  
+}

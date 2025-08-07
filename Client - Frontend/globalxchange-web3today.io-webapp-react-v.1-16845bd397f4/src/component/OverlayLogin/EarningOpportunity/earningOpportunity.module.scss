@@ -1,0 +1,94 @@
+.earningOpportunity {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0 2rem;
+
+  & > .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    & > :nth-child(2) {
+      cursor: pointer;
+    }
+  }
+
+  & > .cardsParent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+
+    & > .eachCard {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border: 1px solid #ededed;
+      border-radius: 15px;
+      padding: 1.5rem;
+      transition: all linear 0.3s;
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+
+      & > .title {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      & > .desc {
+        font-size: 0.9rem;
+      }
+
+      & > .btnParent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > :nth-child(1) {
+          height: 40px;
+          cursor: pointer;
+        }
+
+        & > img {
+          height: 30px;
+          object-fit: contain;
+        }
+
+        & > .arrowBtn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          font-weight: 550;
+          gap: 10px;
+          padding: 8px;
+          border-radius: 50%;
+          background: #f3f4f5;
+          aspect-ratio: 1/1;
+          transition: all linear 0.2s;
+
+          & > span {
+            display: none;
+          }
+
+          &:hover {
+            aspect-ratio: unset;
+            width: max-content;
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+
+            & > span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

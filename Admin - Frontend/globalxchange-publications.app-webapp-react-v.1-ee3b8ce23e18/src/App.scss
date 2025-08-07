@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+@import "./static/scss/newConglomerate";
+
+html,
+body {
+  min-height: 100%;
+  outline: none;
+}
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  // outline: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+#root {
+  height: 100vh;
+  outline: none;
+}
+
+body #root * {
+  font-family: Montserrat;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.grid-cap {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 10.8fr;
+}
+
+.grid-cap-collapsed {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.2fr 6fr;
+}
+
+.icon-imgs {
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+}
+
+.icon-imgs::after {
+  background: #212224;
+  content: "";
+  height: 200px;
+  left: -105px;
+  opacity: 1;
+  position: absolute;
+  top: -70px;
+  width: 20px;
+  transition: all 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  z-index: -10;
+}
+
+.icon-imgs:hover::after {
+  left: 155%;
+  transition: all 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 10;
+}
+
+.icons-sty {
+  margin-left: auto;
+  margin-top: 8px;
+  display: flex;
+}

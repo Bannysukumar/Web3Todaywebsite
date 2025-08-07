@@ -1,0 +1,104 @@
+.thnavstart {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 5%);
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 100%;
+    z-index: 10;
+}
+
+.top-bg {
+    background: white;
+    padding: 5px;
+}
+
+.top-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: auto;
+    max-width: 1280px;
+}
+
+.mainnav12 {
+    display: flex;
+    max-width: 1280px;
+    margin: 10px auto;
+}
+
+.thenav {
+    display: flex;
+    height: 48px;
+    align-items: center;
+}
+
+.navicons {
+    display: flex;
+    margin-right: 30px;
+    cursor: pointer;
+
+    @media screen and (max-width : 800px) {
+        display: none;
+    }
+}
+
+.navmbicon {
+
+    display: none;
+
+    @media screen and (max-width : 800px) {
+        display: block;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+}
+
+.rightbtns {
+    @media screen and (max-width : 800px) {
+        display: none;
+    }
+}
+
+.thenavimg {
+    width: 19px;
+    height: 19px;
+    margin-top: 3px;
+}
+
+.web3img {
+    height: 30px;
+}
+
+.imgdisplay {
+    margin: auto;
+}
+
+.login-btn {
+    margin-left: 30px;
+    background: #4B2A91;
+    color: white;
+    border-radius: 56px;
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid black;
+}
+
+.trade-btn {
+    margin-left: 5px;
+    background: white;
+    color: #000000;
+    border-radius: 56px;
+    padding: 10px 30px;
+    border: 1px solid #E5E5E5;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.the-grp-btns {
+    background: #000000;
+    border-radius: 24px;
+    margin-left: 5px;
+    padding: 10px 20px;
+    border: none;
+}

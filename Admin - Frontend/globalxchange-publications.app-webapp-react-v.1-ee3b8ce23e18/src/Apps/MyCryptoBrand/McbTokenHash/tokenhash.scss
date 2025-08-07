@@ -1,0 +1,821 @@
+@import "../../../static/scss/colors";
+@import "../../../static//scss/mixin";
+
+.withdrawalViewContent {
+    flex: 1;
+    display: flex;
+    .withdrawListNFilter {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      flex-direction: column;
+      .search {
+        flex: 0 0 80px;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        input {
+          padding: 0 50px;
+          font-size: 23px;
+          flex: 1;
+          background: none;
+          border: none;
+        }
+        .icon {
+          flex: 0 0 80px;
+          border-left: 1px solid $border-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          img {
+            height: 40%;
+            width: 40%;
+          }
+          &:hover {
+            background: whitesmoke;
+            img {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+      .statitics {
+        flex: 0 0 50px;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        .label {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          font-weight: 700;
+          padding: 0 30px;
+          color: #182542;
+        }
+        .count,
+        .coin {
+          flex: 0 0 80px;
+          max-width: 80px;
+          border-left: 1px solid $border-color;
+        }
+        .volume {
+          flex: 0 0 120px;
+          max-width: 120px;
+          border-left: 1px solid $border-color;
+        }
+        .coin {
+          img {
+            height: 35px;
+            width: 35px;
+          }
+        }
+        .count,
+        .coin,
+        .volume {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+          font-weight: 700;
+          color: #182542;
+          transition: all 300ms ease;
+          &:hover {
+            font-size: 17px;
+            cursor: pointer;
+            img {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+      .container {
+        display: flex;
+        // flex: 1;
+        width: 100%;
+        height: calc(100vh - 141px) !important;
+        overflow: scroll;
+        .withdrawListWrapper {
+          width: 0 !important;
+          flex: 1;
+          display: flex;
+          .withdrawList {
+            background: white;
+            display: flex;
+            padding: 1px;
+            padding: 30px 50px;
+            .typeColoumn {
+              background: white;
+              flex: 0 0 450px;
+              max-width: 450px;
+              margin-right: 50px;
+              display: flex;
+              flex-direction: column;
+              border: 1px solid $border-color;
+              &.abs {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: 0;
+                z-index: 1;
+              }
+              .head {
+                position: relative;
+                background: white;
+                height: 60px;
+                font-size: 17px;
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+                color: $primary-color-vault;
+                margin: 0;
+                border-bottom: 1px solid $border-color;
+                input {
+                  font-size: 15px;
+                  background-color: transparent;
+                  border: none;
+                  outline: none;
+                  color: $primary-color-vault;
+                  box-shadow: none;
+                  text-shadow: none !important;
+                  width: 0;
+                  flex: 1;
+                }
+                .type {
+                  font-size: 15px;
+                  display: flex;
+                  height: 100%;
+                  padding: 0 15px;
+                  font-weight: 600;
+                  justify-content: center;
+                  align-items: center;
+                  border-left: 1px solid $border-color;
+                  border-right: 1px solid $border-color;
+                }
+                .icon {
+                  margin-left: 15px;
+                  cursor: pointer;
+                }
+              }
+              .footer {
+                position: relative;
+                background: white;
+                height: 60px;
+                flex: 0 0 60px;
+                font-size: 17px;
+                display: flex;
+                color: $primary-color-vault;
+                margin: 0;
+                border-top: 1px solid $border-color;
+                .totalValue,
+                .totalValueAmt,
+                .flag {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: 500;
+                }
+                .totalValue {
+                  padding: 0 30px;
+                }
+                .totalValueAmt {
+                  flex: 1;
+                  border-left: 1px solid $border-color;
+                  border-right: 1px solid $border-color;
+                }
+                .flag {
+                  flex: 0 0 60px;
+                  img {
+                    overflow: hidden;
+                    width: 60%;
+                    height: 60%;
+                    border-radius: 50%;
+                  }
+                }
+              }
+              .columScrlWrap {
+                height: 0 !important;
+                flex: 1;
+                display: flex;
+                .coloumnScroll {
+                  padding: 15px;
+                  display: flex;
+                  flex-direction: column;
+                  .txnItem {
+                    border: 1px solid $border-color;
+                    flex: 0 0 330px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    opacity: 0.3;
+                    .txnHead {
+                      height: 50px;
+                      display: flex;
+                      border-bottom: 1px solid $border-color;
+                      .value {
+                        width: 0;
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 20px;
+                        font-weight: 600;
+                        img {
+                          cursor: pointer;
+                          height: 15px;
+                          width: 15px;
+                          margin-right: 4px;
+                          &:hover {
+                            filter: drop-shadow(1px 1px 2px $primary-color-vault);
+                            transform: scale(1.05);
+                          }
+                        }
+                      }
+                      .coin {
+                        flex: 0 0 50px;
+                        border-left: 1px solid $border-color;
+                        border-right: 1px solid $border-color;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                          width: 60%;
+                          height: 60%;
+                          object-fit: contain;
+                        }
+                        &:last-of-type {
+                          cursor: pointer;
+                          border-right: none;
+                        }
+                      }
+                    }
+                    .content {
+                      height: 0;
+                      flex: 1;
+                      display: flex;
+                      flex-direction: column;
+                      padding: 10px 30px;
+                      justify-content: space-around;
+                      .item {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 15px;
+                        .label {
+                          img {
+                            cursor: pointer;
+                            height: 15px;
+                            width: 15px;
+                            margin-right: 4px;
+                            &:hover {
+                              filter: drop-shadow(1px 1px 2px $primary-color-vault);
+                              transform: scale(1.05);
+                            }
+                          }
+                        }
+                        .value {
+                          display: flex;
+                          align-items: center;
+                          max-width: 50%;
+                          span {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                          }
+  
+                          font-weight: 500;
+                        }
+                      }
+                    }
+                    .txnFooter {
+                      height: 50px;
+                      display: flex;
+                      border-top: 1px solid $border-color;
+                      .color {
+                        flex: 0 0 15px;
+                      }
+                      .time {
+                        flex: 1;
+                        padding: 0 20px;
+                        display: flex;
+                        align-items: center;
+                        font-weight: 600;
+                        text-shadow: 0px 0px 2px white;
+                        img {
+                          cursor: pointer;
+                          height: 15px;
+                          width: 15px;
+                          margin-right: 4px;
+                          &:hover {
+                            filter: drop-shadow(1px 1px 2px $primary-color-vault);
+                            transform: scale(1.05);
+                          }
+                        }
+                      }
+                      .tzBt {
+                        flex: 0 0 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover {
+                          * {
+                            filter: drop-shadow(1px 1px 1px $border-color);
+                            transform: scale(1.05);
+                          }
+                        }
+                      }
+                      .tz {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 20px;
+                        font-weight: 600;
+                        border: 1px solid $border-color;
+                        border-style: none solid;
+                      }
+                      &.Initaiated {
+                        .color {
+                          background: #95d6a4;
+                        }
+                      }
+                      &.Completed {
+                        .color {
+                          background: #3192d3;
+                        }
+                      }
+                      &.Cancelled {
+                        .color {
+                          background: #e73625;
+                        }
+                      }
+                    }
+                    &:hover {
+                      box-shadow: 0px 0px 4px #464b4e;
+                    }
+                    &.true {
+                      opacity: 1;
+                    }
+                  }
+                  .transactionItm {
+                    cursor: pointer;
+                    border: 1px solid $border-color;
+                    flex: 0 0 300px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    opacity: 0.4;
+                    .txnHead {
+                      height: 50px;
+                      padding: 0 30px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      border-bottom: 1px solid $border-color;
+                      .banker {
+                        font-size: 18px;
+                        font-weight: 600;
+                      }
+                      .bankerLogo {
+                        height: 50%;
+                        width: auto;
+                      }
+                    }
+                    .txnContent {
+                      flex: 1;
+                      padding: 30px 0;
+                      .nameNativeValue {
+                        padding: 0 30px;
+                        display: flex;
+                        font-weight: 600;
+                        font-size: 21px;
+                        justify-content: space-between;
+                        span {
+                          white-space: nowrap;
+                          &:first-child {
+                            width: 0;
+                            flex: 1;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                          }
+                        }
+                      }
+                      .emailUsdValue {
+                        margin-top: 4px;
+                        padding: 0 30px;
+                        display: flex;
+                        font-weight: 400;
+                        font-size: 16px;
+                        justify-content: space-between;
+                      }
+                      .btnScrlWrap {
+                        margin-top: 30px;
+                        height: 58px !important;
+                        .btnScrlList {
+                          display: flex;
+                          padding: 4px 30px;
+                          .btnAction {
+                            cursor: pointer;
+                            height: 100%;
+                            flex: 0 0 36%;
+                            margin-right: 4%;
+                            display: flex;
+                            border: 1px solid $border-color;
+                            justify-content: center;
+                            align-items: center;
+                            white-space: nowrap;
+                            padding: 0 20px;
+                            &:hover {
+                              background: $primary-color-vault;
+                              color: white;
+                              font-weight: 500;
+                            }
+                          }
+                          &::after {
+                            content: "";
+                            height: 100%;
+                            flex: 0 0 20px;
+                          }
+                        }
+                      }
+                    }
+                    .txnFooter {
+                      height: 40px;
+                      padding: 0 30px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      font-weight: 600;
+                      &.Initaiated {
+                        background: #95d6a4;
+                      }
+                      &.Completed {
+                        background: #3192d3;
+                      }
+                      &.Cancelled {
+                        background: #e73625;
+                      }
+                    }
+                    &:hover {
+                      background: whitesmoke;
+                      filter: drop-shadow(0px 0px 2px $primary-color-vault);
+                    }
+                    &.true {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+              .hTabs {
+                flex: 0 0 60px;
+                display: flex;
+                border-bottom: 1px solid $border-color;
+                .tab {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 0;
+                  flex: 1;
+                  border-right: 1px solid $border-color;
+                  &.true {
+                    font-weight: 600;
+                    background: $primary-color-vault;
+                    color: white;
+                  }
+                }
+                .btClose {
+                  cursor: pointer;
+                  flex: 0 0 65px;
+                  max-width: 65px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  svg {
+                    width: 40%;
+                    height: 40%;
+                  }
+                }
+              }
+              .scrlTabs {
+                flex: 0 0 60px;
+                border-bottom: 1px solid $border-color;
+                display: flex;
+                overflow-x: scroll;
+                .tab {
+                  cursor: pointer;
+                  flex: 0 0 31%;
+                  padding: 0 30px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: 600;
+                  opacity: 0.4;
+                  text-align: center;
+                  position: relative;
+                  &::before {
+                    content: "";
+                    height: 2px;
+                    background: $primary-color-vault;
+                    width: 0;
+                    transition: ease all 300ms;
+                    margin: auto;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                  }
+                  &.true {
+                    opacity: 1;
+                    &::before {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+              .itemListScroll {
+                height: 0 !important;
+                flex: 1;
+                > div {
+                  padding: 10px;
+                  .item {
+                    cursor: pointer;
+                    border: 1px solid $border-color;
+                    height: 90px;
+                    display: flex;
+                    padding: 20px;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    .coin {
+                      width: 32px;
+                      height: 32px;
+                      margin-right: 10px;
+                      object-fit: contain;
+                    }
+                    span {
+                      font-size: 18px;
+                      font-weight: 600;
+                    }
+                    input[type="checkbox"] {
+                      margin-left: auto;
+                      height: 16px;
+                      width: 16px;
+                    }
+                  }
+                }
+              }
+            }
+            &::after {
+              content: "";
+              height: 100%;
+              flex: 0 0 1px;
+              .withdrawListWrapper {
+                width: 0 !important;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                .withdrawList {
+                  flex: 1;
+                  background: white;
+                  display: flex;
+                  flex-direction: column;
+                  padding: 1px;
+                  .userItemWithdraw {
+                    border-bottom: 1px solid $border-color;
+                    background: white;
+                    height: 70px;
+                    flex: 0 0 14.29%;
+                    padding: 0 70px;
+                    display: flex;
+                    align-items: center;
+                    .profileImg {
+                      height: 34px;
+                      width: 34px;
+                      border-radius: 17px;
+                    }
+                    .email {
+                      margin-left: 15px;
+                      flex: 0 0 23%;
+                      .shName {
+                        display: none;
+                      }
+                    }
+                    .date {
+                      flex: 0 0 23%;
+                    }
+                    .value {
+                      flex: 0 0 23%;
+                      .shUsd {
+                        display: none;
+                      }
+                    }
+                    .actions {
+                      height: 100%;
+                      margin-left: auto;
+                      flex: 0 0 22%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: flex-end;
+                      .btnAction {
+                        cursor: pointer;
+                        margin-left: 20px;
+                        flex: 0 0 28%;
+                        height: 40%;
+                        font-size: 14px;
+                        border: 1px solid $border-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        svg {
+                          margin-left: 15px;
+                        }
+                        .dropList {
+                          height: 200%;
+                          width: 100%;
+                          top: 100%;
+                          left: 0;
+                          right: 0;
+                          .drop {
+                            border-top: 1px solid $border-color;
+                            height: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                          }
+                        }
+                        &:hover {
+                          background: $primary-color-vault;
+                          color: white;
+                          font-weight: 500;
+                        }
+                      }
+                    }
+                    &:hover {
+                      background: #fcfcfc;
+                      * {
+                        zoom: 1.05;
+                      }
+                      .email {
+                        .shName {
+                          display: block;
+                        }
+                        .shEmail {
+                          display: none;
+                        }
+                      }
+                      .value {
+                        .shUsd {
+                          display: block;
+                        }
+                        .shNative {
+                          display: none;
+                        }
+                      }
+                    }
+                    @include xxxl {
+                      zoom: 0.9;
+                      .date {
+                        flex: 0 0 25%;
+                      }
+                      .value {
+                        flex: 0 0 16%;
+                      }
+                      .actions {
+                        flex: 0 0 32%;
+                        .btnAction {
+                          margin-left: 3%;
+                          flex: 0 0 30%;
+                        }
+                      }
+                    }
+                    @include xl {
+                      zoom: 0.8;
+                    }
+                    @include lg {
+                      zoom: 0.76;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .filters {
+          flex: 0 0 30%;
+          border-left: 1px solid $border-color;
+          flex-direction: column;
+          display: flex;
+          .head {
+            flex: 0 0 14.29%;
+            padding: 0 60px;
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 600;
+            border-bottom: 1px solid $border-color;
+          }
+          .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 0 0 60px;
+            overflow: hidden;
+            .hTab {
+              height: 45px;
+              width: 100%;
+              display: flex;
+              overflow: auto;
+              .tabItm {
+                height: 100%;
+                flex: 0 0 28%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 2px solid $border-color;
+                &.true {
+                  justify-content: flex-start;
+                  font-size: 20px;
+                  font-weight: 500;
+                }
+              }
+            }
+            .filterContents {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              width: 95%;
+              justify-content: space-evenly;
+              .inputRow {
+                display: flex;
+                justify-content: space-between;
+                .grp {
+                  flex: 0 0 47%;
+                  .label {
+                    font-size: 15px;
+                  }
+                  input {
+                    border: 1px solid $border-color;
+                    width: 100%;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+          .footerBtns {
+            height: 55px;
+            border-top: 1px solid $border-color;
+            display: flex;
+            .btnReset {
+              cursor: pointer;
+              flex: 0 0 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #464b4e;
+              color: white;
+              font-weight: 60;
+              font-weight: 600;
+            }
+            .btnFilter {
+              cursor: pointer;
+              flex: 0 0 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: white;
+              color: #464b4e;
+              font-weight: 60;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      &.true {
+        .withdrawListWrapper {
+          .withdrawList {
+            .userItemWithdraw {
+              zoom: 0.9;
+              .date {
+                flex: 0 0 28%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  .norecords{
+    display: flex;
+    color: #0e01a8;
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }

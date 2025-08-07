@@ -1,0 +1,316 @@
+@import "../../../static/scss/mixin.scss";
+
+.overlayClose{
+  background-color: rgba(0,0,0,.75);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow: hidden!important;
+  position: fixed!important;
+  right: 0;
+  top: 0;
+  // z-index: 999;
+}
+
+.heroText{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 3vw;
+  line-height: 130%;
+  /* or 56px */
+  
+  display: flex;
+  align-items: center;
+  // letter-spacing: 0.002em;
+  
+  color: #182542;
+  }
+  
+  .subHeroText{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1vw;
+  line-height: 35px;
+  /* or 250% */
+  
+  display: flex;
+  align-items: center;
+  
+  color: #182542;
+  }
+
+  .requestDemoButton{
+    background: #182542;
+  opacity: 0.9;
+  border: 0.5px solid #182542;
+  border-radius: 15px;
+  
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1vw;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #FFFFFF;
+  @include btn-animate(#FFFFFF);
+  
+  
+  }
+  
+  .watchVideoButton{
+    // background: #FFFFFF;
+  opacity: 0.9;
+  border: 0.5px solid #182542;
+  border-radius: 15px;
+  
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1vw;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #182542;
+  @include btn-animate(#182542);
+  
+  }
+
+
+.videoModalVisible{
+  background-color: rgba(0,0,0,.75);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow: hidden!important;
+  position: fixed!important;
+  right: 0;
+  top: 0;
+  visibility: visible;
+  // position: absolute; 
+  width: 100%;
+  height: 315;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.videoModalHidden{
+  visibility: hidden;
+  
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 0.5px solid #E5E5E5;
+  padding:10px;
+  border-radius: 5px;
+}
+  
+
+.ctaSection{
+
+    background: #182542;
+    color: white;
+    height: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 45px;
+  /* or 250% */
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #FFFFFF;
+  // @include btn-animate(#FFFFFF);
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.3s all ease-in-out;
+  }
+  }
+  
+  .statSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+    & > div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // border: 0.3px solid #EFEFEF;
+      &:nth-child(n){
+        border-right:  0.5px solid #EFEFEF;
+        border-bottom: 0.5px solid #EFEFEF;
+      }
+      
+    }
+  
+    
+  }
+
+  .bgclass{
+    background-image: url("../../../static/images/bgs/homeBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:center;
+}
+
+.bgclass1{
+    background-image: url("../../../static/images/bgs/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:right;
+}
+
+.bgclass2{
+    background-image: url("../../../static/images/bgs/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:center;
+}
+.bgclass3{
+    background-image: url("../../../static/images/bgs/bg3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:center;
+}
+
+.statCard{
+  .title{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 85px;
+  // line-height: 160%;
+  /* or 104px */
+  
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.002em;
+  
+  color: #182542;
+  
+  }
+  .subtitle{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    // line-height: 160%;
+    /* or 26px */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
+    
+    color: #182542;
+    
+  }
+
+  &:hover{
+    // background-color: #182542;
+    .title{
+      cursor: pointer;
+      transform: scale(1.2);
+      transition: 0.3s all ease-in-out;
+// color: white;
+    }
+    .subtitle{
+      cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s all ease-in-out;
+    // color: white;
+    }
+    
+}
+
+}
+
+
+.contentSections{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+  
+  // background-color: red;
+  .textSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding:0px 80px;
+    .bigTitle{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 75px;
+      /* or 125% */
+      display: flex;
+      align-items: center;
+      color: #182542;
+    }
+    .smallSubtitle{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 45px;
+      /* or 250% */
+      display: flex;
+      align-items: center;
+      color: #182542;
+      padding-top: 60px;
+      padding-right: 10vh;
+    }
+    .learnMoreButton{
+      margin-top: 45px;
+      background: #FFFFFF;
+    border: 0.25px solid #182542;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    padding: 21px 43px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    // display: flex;
+    // align-items: center;
+    // text-align: center;
+    
+    color: #182542;
+    }
+  }
+  .imgSection{
+    
+  }
+}

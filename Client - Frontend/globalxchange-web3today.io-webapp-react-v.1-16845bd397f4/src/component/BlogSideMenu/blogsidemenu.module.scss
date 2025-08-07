@@ -1,0 +1,168 @@
+.blogSideMenu {
+  color: var(--font-color);
+  height: 100%;
+
+  & > .filterType {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    background: var(--highlight-color);
+    border-radius: 35px;
+    padding: 10px;
+    // border-bottom: 1px solid var(--bordercolor-main);
+
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 42.5%;
+      padding: 0.75rem 0;
+      cursor: pointer;
+      border-radius: 35px;
+      font-weight: 400;
+      transition: all ease-in 0.2s;
+
+      &:hover {
+        background: rgb(229, 229, 229, 0.5);
+        // align-items: flex-end;
+      }
+    }
+  }
+
+  & > .card {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid var(--bordercolor-main);
+    border-radius: 15px;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    position: relative;
+    // margin-bottom: 1.5rem;
+
+    & > .profileImg {
+      min-height: 100%;
+      max-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > img {
+        height: 40px;
+        width: 40px;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+    }
+
+    & > .details {
+      & > :nth-child(1) {
+        font-size: 17px;
+        font-weight: 600;
+      }
+      & > :nth-child(2) {
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all ease-in 0.1s;
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+    & > .socialHandles {
+      position: absolute;
+      right: 0.5rem;
+      bottom: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: space-between;
+      // & > svg {
+      //   cursor: pointer;
+      //   width: 25px;
+      //   height: 25px;
+      //   transition: all ease-in 0.2s;
+
+      //   &:hover {
+      //     scale: 1.1;
+      //   }
+      // }
+
+      & > svg {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        fill-opacity: 0.5;
+
+        &:hover {
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+
+  & > .contentDiv {
+    // overflow-y: scroll;
+    // border: 1px solid red;
+    // height: -webkit-fill-height-available;
+    height: calc(100% - 121.4px - 3rem);
+  }
+}
+
+.eachCardContentDiv {
+  border-bottom: 1px solid var(--bordercolor-main);
+  padding: 1rem 0;
+  display: flex;
+  // justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all ease-in 0.3s;
+
+  &:hover {
+    transform: translateX(15px);
+    // border: 1px solid var(--bordercolor-main);
+    // border-radius: 5px;
+  }
+
+  & > .imgContainer {
+    min-width: 40%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      max-height: 115px;
+      //   object-fit: contain;
+      border-radius: 10px;
+    }
+  }
+
+  & > .contentContainer {
+    width: 60%;
+    max-width: 60%;
+
+    & > :nth-child(1) {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    & > :nth-child(2) {
+      margin-top: 10px;
+      font-size: 11px;
+      font-weight: 400;
+    }
+  }
+}

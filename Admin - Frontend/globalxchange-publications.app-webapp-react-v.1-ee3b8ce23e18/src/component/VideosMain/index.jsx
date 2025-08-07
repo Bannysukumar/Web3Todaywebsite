@@ -1,0 +1,291 @@
+import React, { useContext, useEffect, useState } from "react";
+
+import classNames from "./articlesmain.module.scss";
+import axios from "axios";
+import Skeleton from "react-loading-skeleton";
+import moment from "moment";
+import { Link, useNavigate, useLocation, useParams } from "react-router-dom";
+import { GlobalContex } from "../../globalContext";
+
+import linkedinIcon from "../../assets/images/icons/linkedin.svg";
+import twitterIcon from "../../assets/images/icons/twitter.svg";
+import {
+  EachArticleSkeletonLoading,
+  SocialMediaHandles,
+} from "../ArticlesMain";
+
+const VideosMain = () => {
+  const { category } = useParams();
+  const location = useLocation();
+  const { setCategoryId, setAuthorDetails } = useContext(GlobalContex);
+  const navigate = useNavigate();
+  const [allVideos, setAllVideos] = useState("");
+  const [allAuthors, setAuthors] = useState("");
+  const [allCategories, setAllCategories] = useState("");
+  const [allCampaigns, setAllCampaigns] = useState("");
+  const [articlesLoading, setArticlesLoading] = useState(false);
+  const { categoryId } = useContext(GlobalContex);
+
+  useEffect(() => {
+    setArticlesLoading(true);
+    axios
+      .get(
+        "https://publications.apimachine.com/video/publication/638dd769b257b3715a8fbe07"
+      )
+      .then((response) => {
+        console.log(response?.data, "all videos articles");
+        if (response?.data?.status) {
+          setAllVideos(response?.data?.data);
+          setArticlesLoading(false);
+        } else {
+          setAllVideos("false");
+          setArticlesLoading(false);
+        }
+      })
+      .catch((error) => {
+        console.log(error?.message, "trending articles API  error");
+      });
+  }, [categoryId]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://publications.apimachine.com/application/publication/638dd769b257b3715a8fbe07"
+      )
+      .then((response) => {
+        console.log(response?.data, "all authors");
+        if (response?.data?.status) {
+          setAuthors(response?.data?.data);
+        } else {
+          setAuthors("false");
+        }
+      })
+      .catch((error) => {
+        console.log(error?.message, "all authors API  error");
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://publications.apimachine.com/category/publication/638dd769b257b3715a8fbe07"
+      )
+      .then((response) => {
+        console.log(response?.data?.data, "all catergories");
+        setAllCategories(response?.data?.data);
+      })
+      .catch((error) => {
+        console.log(error?.message, "all categories API  error");
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://comms.globalxchange.io/coin/promo/farm/video/campaign/get?status=active"
+      )
+      .then((response) => {
+        // console.log(response?.data?.videoCampaigns, "all earning campaigns");
+        setAllCampaigns(response?.data?.videoCampaigns);
+      })
+      .catch((error) => {
+        console.log(error?.message, "all earning campaigns API  error");
+      });
+  }, []);
+
+  return (
+    <div className={classNames.articlesMain}>
+      <div className={classNames.trendingArticles}>
+        <div className={classNames.articlesContainer}>
+          <div className={classNames.title}>All Videos</div>
+          <div className={classNames.articles}>
+            <div className={classNames.articlesList}>
+              {articlesLoading
+                ? Array.from({ length: 3 }).map((_, index) => {
+                    return (
+                      <EachArticleSkeletonLoading
+                        key={"categoryloading" + index}
+                      />
+                    );
+                  })
+                : allVideos?.length > 0 &&
+                  allVideos?.map((eacharticle) => {
+                    return (
+                      <div
+                        className={classNames.eachArticle}
+                        onClick={() =>
+                          navigate(`/news/video/${eacharticle?.custom_url}`)
+                        }
+                      >
+                        <div className={classNames.imageDiv}>
+                          <img
+                            src={eacharticle?.image ? eacharticle?.image : ""}
+                            alt=""
+                          />
+                        </div>
+                        <div className={classNames.contentDiv}>
+                          <div className={classNames.title}>
+                            {eacharticle?.title ? eacharticle?.title : ""}
+                          </div>
+                          <div className={classNames.para}>
+                            {eacharticle?.desc ? eacharticle?.desc : ""}
+                          </div>
+                          <div className={classNames.details}>
+                            <div className={classNames.author}>
+                              <img
+                                src={
+                                  eacharticle?.PublisherDetails[0]
+                                    ?.PublisherDetails[0]?.profile_pic
+                                    ? eacharticle?.PublisherDetails[0]
+                                        ?.PublisherDetails[0]?.profile_pic
+                                    : ""
+                                }
+                                alt=""
+                              />
+                              <span>
+                                {eacharticle?.PublisherDetails[0]
+                                  ?.PublisherDetails[0]?.name
+                                  ? eacharticle?.PublisherDetails[0]
+                                      ?.PublisherDetails[0]?.name
+                                  : ""}
+                              </span>
+                            </div>
+                            <div className={classNames.publishDate}>
+                              {eacharticle?.createdAt
+                                ? moment(eacharticle?.createdAt)
+                                    .startOf("day")
+                                    .fromNow()
+                                    ?.split(" ")
+                                    .map(
+                                      (word) =>
+                                        word.charAt(0).toUpperCase() +
+                                        word.slice(1)
+                                    )
+                                    .join(" ")
+                                : ""}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className={classNames.categoriesContainer}>
+            <div className={classNames.title}>Categories</div>
+            <div className={classNames.allCategories}>
+              {allCategories?.length > 0 &&
+                allCategories?.map((eachcategory) => {
+                  return (
+                    <Link
+                      to={`/news/videos/${eachcategory?.title}`}
+                      onClick={() => {
+                        setCategoryId(eachcategory?._id);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        // console.log(eachcategory, "newssss");
+                      }}
+                    >
+                      <div className={classNames.header}>
+                        <img src={eachcategory?.thumbnail} alt="" />
+                        {eachcategory?.title}
+                      </div>
+                      {/* <div className={classNames.count}>
+                        {location?.pathname?.toLowerCase()?.includes("video")
+                          ? eachcategory?.videosCount
+                          : eachcategory?.articlesCount}
+                      </div> */}
+                    </Link>
+                  );
+                })}
+            </div>
+          </div>
+          <div className={classNames.earnCampaigns}>
+            <div className={classNames.title}>Earn Campaigns</div>
+            <div className={classNames.earnCampaignsContainer}>
+              {allCampaigns?.length > 0 &&
+                allCampaigns?.map((eachcampaign) => {
+                  return (
+                    <div
+                      className={classNames.eachEarnCampaigns}
+                      onClick={() => {
+                        if (eachcampaign?.video_nickname) {
+                          window.open(
+                            `https://web3today.io/earn/ads/${eachcampaign?.video_nickname}`,
+                            "_blank"
+                          );
+                        }
+                      }}
+                    >
+                      <img
+                        src={
+                          eachcampaign?.video_thumbnail
+                            ? eachcampaign?.video_thumbnail
+                            : ""
+                        }
+                        alt=""
+                      />
+                      <div className={classNames.title}>
+                        {eachcampaign?.video_title
+                          ? eachcampaign?.video_title
+                          : ""}
+                      </div>
+                      <div className={classNames.para}>
+                        {" "}
+                        {eachcampaign?.video_description
+                          ? eachcampaign?.video_description
+                          : ""}
+                      </div>
+                      <div className={classNames.btn}>Start Earning </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+          <div className={classNames.authorsProfile}>
+            <div className={classNames.title}>Authors</div>
+            <div className={classNames.authorsContainer}>
+              {allAuthors?.length > 0 &&
+                allAuthors?.map((eachauthor) => {
+                  return (
+                    <div
+                      className={classNames.eachAuthorprofile}
+                      onClick={() => {
+                        setAuthorDetails(eachauthor);
+                        navigate(`/${eachauthor?.email}/video`);
+                        localStorage.setItem("selectedauthor", eachauthor?._id);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      <img
+                        src={
+                          eachauthor?.profile_pic ? eachauthor?.profile_pic : ""
+                        }
+                        alt=""
+                      />
+                      <div className={classNames.authorDetails}>
+                        <div className={classNames.name}>
+                          {eachauthor?.name ? eachauthor?.name : ""}
+                        </div>
+                        <div>
+                          <div className={classNames.viewProfileBtn}>
+                            View Profile
+                          </div>
+                          <div className={classNames.socialMediaHandles}>
+                            <SocialMediaHandles />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VideosMain;

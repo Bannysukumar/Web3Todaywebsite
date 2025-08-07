@@ -1,0 +1,79 @@
+.tabInterface {
+  display: grid;
+  grid-template-columns: 6fr 2.5fr;
+  // background-color: red;
+  height: 70px;
+  border-bottom: 1px solid var(--bordercolor-main) 80;
+}
+
+.filterRow {
+  // background-color: yellowgreen;
+  border-bottom: 1px solid var(--bordercolor-main) 80;
+  height: 50px;
+}
+
+.tabsWrapper {
+  display: flex;
+  overflow-x: scroll;
+
+  .tabs {
+    position: relative;
+    flex: 0 0 240px;
+    height: 70px;
+    background-color: var(--highlight-color-opposite);
+    border-right: 1px solid var(--bordercolor-main) 80;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    cursor: pointer;
+
+    .tabIcon {
+      width: 30px;
+    }
+
+    .tabName {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      padding-left: 10px;
+      color: #2e2d2d;
+    }
+
+    .cross {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      width: 9px;
+      height: 9px;
+      cursor: pointer;
+    }
+  }
+}
+
+.addNew {
+  // position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 35px;
+  color: var(--font-color-opposite);
+
+  background: #78c92e;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.vault-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 35px;
+  color: var(--font-color);
+  font-weight: 700;
+  border: 1px solid var(--bordercolor-main);
+  border-radius: 15px;
+  cursor: pointer;
+}

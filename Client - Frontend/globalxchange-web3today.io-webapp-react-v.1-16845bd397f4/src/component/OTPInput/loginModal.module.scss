@@ -1,0 +1,303 @@
+@import "../../static/scss/colours";
+
+$width: 100%;
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $overlay-color;
+  }
+  .modal {
+    z-index: 1;
+    background: white;
+    width: 600px;
+    height: 650px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .head {
+      height: 120px;
+      border-bottom: 1px solid $border-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+    .content {
+      flex: 1;
+    }
+    .next {
+      cursor: pointer;
+      flex: 0 0 60px;
+      max-height: 60px;
+      background: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      transition: all 400ms ease;
+      &:hover {
+        * {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+.userTypeContent {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .label {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .optionWrap {
+    margin: 10px 0;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    .option {
+      border-radius: 6px;
+      border: 1px solid $border-color;
+      flex: 0 0 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      * {
+        transition: all 400ms ease;
+      }
+      img {
+        height: 45%;
+        width: 42%;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 14px;
+      }
+      &:hover {
+        * {
+          transform: scale(1.1);
+        }
+      }
+      &.true {
+        border: 2px solid $border-color;
+        background: whitesmoke;
+      }
+    }
+  }
+}
+.loginContent {
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  .group {
+    position: relative;
+    margin: 0;
+    input,
+    button {
+      width: 100%;
+    }
+    input[type="password"],
+    input[type="text"] {
+      background: none;
+      color: #505050;
+      font-size: 18px;
+      padding: 10px 10px 10px 0;
+      display: block;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #505050;
+      &:focus {
+        outline: none;
+      }
+      &:focus ~ label,
+      &:valid ~ label {
+        top: -14px;
+        font-size: 12px;
+        color: #00000070;
+        font-weight: 700;
+      }
+      &:focus ~ .bar:before {
+        width: $width;
+      }
+    }
+
+    input[type="password"] {
+      letter-spacing: 0.3em;
+    }
+    label {
+      color: #00000050;
+      font-size: 16px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 0;
+      top: 10px;
+      transition: 300ms ease all;
+    }
+    .eye {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      margin: auto;
+      color: $primary-color;
+    }
+  }
+}
+.transactorMenu {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .header {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 2;
+  }
+  .label {
+    font-size: 17px;
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+  .optionWrap {
+    margin: 10px 0;
+    height: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .option {
+      border-radius: 6px;
+      border: 1px solid $border-color;
+      flex: 0 0 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      opacity: 0.3;
+      text-decoration: none;
+      color: black;
+      * {
+        transition: all 400ms ease;
+      }
+      img {
+        height: 42%;
+        width: 34%;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 14px;
+      }
+      &:hover {
+        * {
+          transform: scale(1.1);
+        }
+      }
+      &.true {
+        border: 2px solid $border-color;
+        background: whitesmoke;
+      }
+    }
+    a.option {
+      opacity: 1;
+    }
+  }
+}
+.loginLoading {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.otpWrapper {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 2.5rem;
+  position: absolute;
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1/1.1;
+  border-radius: 35px;
+
+  .header {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    & > img {
+      width: 120px;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .otpInputWrapper {
+    justify-content: space-between;
+
+    > div {
+      flex: 0 0 20%;
+      aspect-ratio: 1/1;
+
+      .otpInput {
+        width: 100% !important;
+        height: 100%;
+        border: 2px solid $vault-border-color;
+        border-radius: 8px;
+        font-size: 28px;
+      }
+    }
+  }
+
+  .btn {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    background: #4b2a91;
+    position: absolute;
+    bottom: -0.5px;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 35px 35px;
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .otpWrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    min-height: 50%;
+  }
+}

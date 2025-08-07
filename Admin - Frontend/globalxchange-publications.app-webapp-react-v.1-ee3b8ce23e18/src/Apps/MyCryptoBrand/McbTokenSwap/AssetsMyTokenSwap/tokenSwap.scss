@@ -1,0 +1,43 @@
+.tokenList {
+    display: grid;
+    padding: 10px 30px;
+    height: 45px;
+    border-bottom: solid 0.5px #E7E7E7;
+    font-size: 0.8rem;
+
+    &>div:not(:first-child) {
+        text-align: right;
+        font-weight: 600;
+
+    }
+
+    &>div {
+        font-weight: 600;
+
+    }
+}
+
+.leftList {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.dispfonts{
+    @media screen and (max-width : 1600px) {
+        font-size: 10px;
+    }
+}
+
+.listDataGrid  .thefont{
+    @media screen and (max-width : 1600px) {
+        font-size: 12px;
+    }
+}
+
+.listDataGrid .thesubfont{
+    @media screen and (max-width : 1600px) {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,199 @@
+@import "../../../../static/scss/mixin.scss";
+
+.desktopWrapper {
+  position: relative;
+
+  & > .creatorsArticles {
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    // transition: all linear 0.3s;
+    scroll-behavior: smooth;
+
+    & > .panelContainer {
+      width: 80%;
+      height: 100%;
+      max-width: 450px;
+      background: white;
+      border-left: 0.5px solid #e7e7e7;
+      position: absolute;
+      top: 0;
+      right: -300%;
+      transition: all linear 0.1s;
+
+      & > .articlesFilter {
+        padding: 1.5rem;
+        height: 100%;
+        overflow-y: scroll;
+
+        & > .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          & > .title {
+            font-size: 1.6rem;
+            font-weight: 550;
+
+            & > .typeTitle {
+              font-size: 0.8rem;
+              font-weight: 400;
+
+              & > span {
+                cursor: pointer;
+                transition: all linear 0.3s;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+
+          & > .closeButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background: #4b9ddc1a;
+            color: #4b9ddc;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: 3rem;
+            aspect-ratio: 1/1;
+            border: 1px solid #4b9ddc1a;
+            transition: all linear 0.2s;
+
+            &:hover {
+              background: white;
+            }
+          }
+        }
+
+        & > .differentMethods {
+          & > .title {
+            font-size: 1rem;
+            font-weight: 450;
+            padding: 1.5rem 0;
+          }
+
+          & > .eachOption {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            border: 1px solid #e7e7e7;
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-bottom: 1.2rem;
+            cursor: pointer;
+            transition: all linear 0.3s;
+
+            &:hover {
+              border: 1px solid #4b9ddc;
+            }
+          }
+        }
+
+        & > .clearFilterButton {
+          background: #4b9ddc;
+          color: white;
+          font-size: 0.9rem;
+          font-weight: 550;
+          text-align: center;
+          cursor: pointer;
+          padding: 1rem 1.5rem;
+          border-radius: 35px;
+          margin-top: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.dashboardAppsMobile {
+  display: none;
+}
+
+.readbtn {
+  background: #ffffff;
+  border: 0.5px solid #e7e7e7;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #18191d;
+  padding: 8px 15px;
+  width: 100px;
+  cursor: pointer;
+  // @include btn-animate(black);
+}
+
+.actionbtn {
+  background: #ffffff;
+  border: 0.5px solid #e7e7e7;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #18191d;
+  padding: 8px 15px;
+  margin-left: 10px;
+  width: 100px;
+  cursor: pointer;
+  @include btn-animate(black);
+}
+
+.btngrp {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
+.bottomBtn{
+  background: #4b9ddc;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 550;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 35px;
+  margin-top: 1.2rem;
+  position: absolute;
+  bottom: 20px;
+  width: 400px;
+}
+
+.bottomSelect{
+  background: black;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 550;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border-radius: 35px;
+  margin-top: 1.2rem;
+  position: absolute;
+  bottom: 80px;
+  width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .dashboardAppsMobile {
+    display: block;
+    // display: block;
+    // background-color: red;
+    // overflow-y: scroll;
+    // overflow-x: scroll;
+    // height: 40vh;
+    padding-bottom: 20vh;
+    // position: absolute;
+    // top:20;
+    // overflow-y: scroll;
+    height: 100vh; // justify-content: 'flex-start';
+  }
+}

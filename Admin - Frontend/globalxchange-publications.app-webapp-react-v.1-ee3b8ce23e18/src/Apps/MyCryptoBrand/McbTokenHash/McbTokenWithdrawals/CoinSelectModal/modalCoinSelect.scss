@@ -1,0 +1,104 @@
+@import "../../../../../static/scss/colors";
+.modalCountrySelect {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  .overlayClose {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+  }
+  .modalContent {
+    margin: auto;
+    z-index: 1;
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 25px;
+    .head {
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 40%;
+        margin-top: 30px;
+      }
+    }
+    .content {
+      padding: 30px 60px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .searchCountry {
+        height: 45px;
+        border-radius: 0;
+        background: none;
+        border: 1px solid $vault-border-color;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        &::placeholder {
+          text-transform: capitalize;
+        }
+      }
+      .countryListScroll {
+        flex: 1;
+        .countryList {
+          display: flex;
+          flex-direction: column;
+          .listCountry {
+            flex: 0 0 25%;
+            display: flex;
+            padding: 0 10px;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            .name {
+              font-size: 20px;
+              font-weight: 600;
+            }
+            .flag {
+              height: 40px;
+              object-fit: contain;
+            }
+            &:hover {
+              background: whitesmoke;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      border-top: 1px solid $vault-border-color;
+      flex: 0 0 80px;
+      display: flex;
+      .btnType {
+        width: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 600;
+        transition: all 300ms ease;
+        &.true {
+          background: rgb(24, 37, 66);
+          color: white;
+        }
+        &:hover {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.tokenList {
+    display: grid;
+    padding: 10px 30px;
+    height: 45px;
+    border-bottom: solid 0.5px #E7E7E7;
+    font-size: 0.8rem;
+
+    &>div:not(:first-child) {
+        text-align: right;
+        font-weight: 600;
+
+    }
+
+    &>div {
+        font-weight: 600;
+
+    }
+}
+
+.leftList {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}

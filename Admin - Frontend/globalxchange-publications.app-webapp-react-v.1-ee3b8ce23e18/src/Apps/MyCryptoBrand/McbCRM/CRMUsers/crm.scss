@@ -1,0 +1,14 @@
+
+
+.crmUsersMobile{
+    display: none;
+ }
+ @media only screen and (max-width: 600px) {
+     .crmUsersMobile{
+         display: block;
+         padding-bottom: 20vh;       
+         height: 100vh         
+     }
+   }
+ 
+ 

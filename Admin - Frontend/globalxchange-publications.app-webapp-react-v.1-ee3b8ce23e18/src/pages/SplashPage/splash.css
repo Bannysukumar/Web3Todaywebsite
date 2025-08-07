@@ -1,0 +1,55 @@
+.bg{
+    background: url('http://www.skrenta.com/images/stackoverflow.jpg') no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 1)));
+}
+
+.bgclass{
+    background-image: url("../../static/images/bgs/homeBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:center;
+}
+
+.bgclass1{
+    background-image: url("../../static/images/bgs/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:right;
+}
+
+.bgclass2{
+    background-image: url("../../static/images/bgs/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:center;
+}
+.bgclass3{
+    background-image: url("../../static/images/bgs/bg3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position:center;
+}
+
+
+.skeleton .line {
+    height: 12px;
+    margin-bottom:6px;
+    border-radius: 2px;
+    background: rgba(130, 130, 130, 0.2);
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
+    background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+    background-size: 800px 100px;
+    animation: wave-lines 2s infinite ease-out;
+}
+
+@keyframes wave-lines {
+    0% {
+        background-position: -468px 0;
+    }
+     100% {
+        background-position: 468px 0;
+    }
+}

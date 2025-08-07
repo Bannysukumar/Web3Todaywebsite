@@ -1,0 +1,22 @@
+
+.dashboardBrandsMobile{
+   display: none;
+}
+@media only screen and (max-width: 600px) {
+    .dashboardBrandsMobile{
+        display: block;
+        // background-color: red;
+       
+        // // overflow-x: scroll;
+        // width: auto;
+        // height: 100vh;
+        padding-bottom: 20vh;
+       
+        // position: absolute;
+        // top:20;
+        // overflow-y: scroll;
+        // height: 100vh
+        // justify-content: 'flex-start';
+    }
+  }
+

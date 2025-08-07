@@ -1,0 +1,233 @@
+.crypto-start-up-sidebar {
+  width: calc(100%);
+  height: 100%;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: var(--text-color) !important;
+  }
+  .sidebar-list-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: calc(5vh);
+    cursor: pointer;
+    .close-mobile-logo {
+      display: none;
+    }
+    img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    h4 {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+  }
+  .c-s-l-h {
+    padding: 0;
+    justify-content: center;
+    img {
+      margin: 0;
+    }
+  }
+  .sidebar-list-wrapper {
+    width: calc(100%);
+    overflow-y: auto;
+    overflow-x: visible !important;
+    height: calc(100% - 160px);
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 10vh;
+    padding-left: 5vh;
+    position: relative;
+    .c-s-s-overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: 1;
+    }
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    button {
+      width: 100%;
+      background-color: transparent;
+      border: 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      //   padding: 20px 0;
+      height: calc(100% / 10);
+      padding-left: 20px;
+      font-weight: 600;
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+      font-size: 2.2vh;
+      p {
+        // display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+      }
+      &:hover {
+        background-color: rgba($color: #f1f4f6, $alpha: 0.5);
+      }
+
+      img {
+        margin-right: 2vh;
+        height: 3vh;
+        width: 3vh;
+      }
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+    .selected-section {
+      background-color: #f1f4f6;
+      &:hover {
+        background-color: #f1f4f6;
+      }
+    }
+  }
+  .sidebar-guest {
+    height: 80px;
+    width: calc(100%);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    cursor: pointer;
+    h6 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 130%;
+    }
+    div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 5vh;
+      img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      h4 {
+        margin-bottom: 0;
+        font-weight: 700;
+        position: relative;
+        p {
+          display: none;
+          position: absolute;
+          left: 120%;
+          top: 0;
+          padding: 4px 10px;
+          font-size: 60%;
+          font-weight: 500;
+          background-color: white;
+          border: 1px solid var(--border-color);
+        }
+        &:hover {
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+.adjust-small-size {
+  .sidebar-guest {
+    height: 0;
+    overflow: hidden;
+    h6 {
+      font-weight: 700;
+    }
+  }
+  .sidebar-list-wrapper {
+    padding: 0;
+    padding-top: 20px;
+    height: 100%;
+    button {
+      padding: 0px 0;
+      justify-content: center;
+      opacity: 0.5;
+      transition: 0.3s;
+      height: calc(100% / 9);
+      position: relative;
+      p {
+        display: none;
+        font-size: 70%;
+        border: 1px solid var(--border-color);
+        background-color: white;
+        padding: 1px 10px;
+      }
+      &:hover {
+        p {
+          display: block;
+          margin: 0;
+          position: absolute;
+          top: 85%;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 100;
+        }
+      }
+      img {
+        margin: 0;
+        transform: scale(1);
+      }
+      span {
+        display: none;
+      }
+      &:hover {
+        transition: 0.3s;
+        background-color: transparent;
+        opacity: 0.9;
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .selected-section {
+      transition: 0.3s;
+      opacity: 1;
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
+      img {
+        transition: 0.3s;
+        transform: scale(1.4);
+      }
+    }
+  }
+  .sidebar-guest {
+    padding: 0;
+    justify-content: center;
+    div {
+      display: none;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .crypto-start-up-sidebar{
+    overflow: hidden;
+  }
+  .adjust-small-size {
+    width: 0% !important;
+    overflow: hidden;
+
+  }
+}
