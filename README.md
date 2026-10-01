@@ -1,44 +1,56 @@
-# Create, Grow, And Monetize Your Blog By Converting Into A #Publication
+<!-- readme-seo: bannysukumar-professional-v4 -->
 
-Publications.app is a AI enabled publishing took which allows you to create, grow and monetize your written content.
+# Publications.app and web3today.io
 
-[![License](https://img.shields.io/github/license/Bannysukumar/Web3Todaywebsite)](https://github.com/Bannysukumar/Web3Todaywebsite/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/Web3Todaywebsite)](https://github.com/Bannysukumar/Web3Todaywebsite/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/Web3Todaywebsite)](https://github.com/Bannysukumar/Web3Todaywebsite/commits/main)
+This repository holds two React web app trees: `Admin - Frontend` / client paths named for Publications.app, and a client path named for web3today.io. It is not a Solidity project. The repository name is `Web3Todaywebsite`.
 
 ## Overview
 
-Publications.app is a AI enabled publishing took which allows you to create, grow and monetize your written content.
+The inspected tree has the folders `Admin - Frontend`, `Client - Frontend`, and `Backend`. Public entry files include `globalxchange-publications.app-webapp-react` and `globalxchange-web3today.io-webapp-react`. No `.sol` file was in the file list used for this update, so ethereum, dapp, and web3 topics are not applied.
 
+GitHub currently reports the primary language as JavaScript. The license file is MIT.
 
-What is actually in the repository: `Admin - Frontend/`, `Backend/`, `Client - Frontend/`. GitHub reports the primary language as JavaScript.
+## Features
+
+- A React client tree for Publications.app
+- A React client tree for web3today.io
+- An `Admin - Frontend` directory
+- A `Backend` directory
 
 ## Tech Stack
 
 | Technology | Where it shows up |
 |---|---|
-| React | User interface |
-| Ant Design | Dashboard UI components |
+| JavaScript | Primary language reported by GitHub, and the React app folders |
+| React | Folder names ending in `webapp-react` |
 
 ## Project Structure
 
 ```text
 Web3Todaywebsite/
 ├── Admin - Frontend/
-├── Backend/
 ├── Client - Frontend/
+├── Backend/
+├── LICENSE
+└── README.md
 ```
 
-## Getting Started
+## Prerequisites
+
+- Node.js and npm if you install dependencies inside one of the React app folders
+
+## Installation
 
 ```bash
 git clone https://github.com/Bannysukumar/Web3Todaywebsite.git
 cd Web3Todaywebsite
 ```
 
-Scripts defined in package.json:
+Open the React app directory you want to run and use the `package.json` in that directory. This README does not invent a root install script, because the root has no `package.json`.
 
-- `npm run start` — `react-scripts start`
-- `npm run build` — `react-scripts build`
-- `npm run test` — `react-scripts test`
+## Usage
+
+Publications.app and web3today.io are separate client trees in this one repository. Use the matching folder for the site you want to work on.
 
 ## Contributing
 
@@ -50,8 +62,6 @@ Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-[Banny Sukumar](https://github.com/Bannysukumar)
+Banny Sukumar
 
-- GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
-- Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
-- LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
+GitHub: https://github.com/Bannysukumar
